@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\MouseLook.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\Shooting.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/emre.sisman/Documents/EndlessFight/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
