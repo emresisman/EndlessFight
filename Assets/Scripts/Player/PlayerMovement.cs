@@ -44,4 +44,9 @@ public class PlayerMovement : MonoBehaviour {
             _ui.DangerText(false);
         }
     }
+
+    public Vector3 GetPosition()
+    {
+        return this.transform.position;
+    }
 }
