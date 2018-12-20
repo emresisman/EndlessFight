@@ -1,6 +1,7 @@
 Base path: C:/Program Files/Unity/Editor/Data
 Cmd: initializeCompiler
 Cmd: compileComputeKernel
+<<<<<<< HEAD
   api=4 insize=13661 outsize=89337 ok=1
 Cmd: compileComputeKernel
   api=4 insize=13661 outsize=34509 ok=1
@@ -36,6 +37,41 @@ Cmd: compileComputeKernel
   api=4 insize=8350 outsize=2077 ok=1
 Cmd: compileComputeKernel
   api=4 insize=14079 outsize=2265 ok=1
+=======
+  api=4 insize=13661 outsize=98921 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=13661 outsize=35845 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=13661 outsize=90965 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=13661 outsize=33825 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=26681 outsize=15525 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=2059 outsize=349 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=1176 outsize=781 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=10881 outsize=10437 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=4845 outsize=9129 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=18299 outsize=8925 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=1567 outsize=961 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=19063 outsize=14613 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=5435 outsize=6445 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=2867 outsize=353 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=20370 outsize=95037 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=36517 outsize=32285 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=17323 outsize=15157 ok=1
+>>>>>>> 68cae9712df0e4c92685e54456332e69b1aff7ec
 Cmd: compileComputeKernel
   api=4 insize=16866 outsize=5425 ok=1
 Cmd: compileComputeKernel
@@ -43,6 +79,7 @@ Cmd: compileComputeKernel
 Cmd: compileComputeKernel
   api=4 insize=16866 outsize=7485 ok=1
 Cmd: compileComputeKernel
+<<<<<<< HEAD
   api=4 insize=16866 outsize=7333 ok=1
 Cmd: compileComputeKernel
   api=4 insize=16866 outsize=9301 ok=1
@@ -85,4 +122,75 @@ Cmd: initializeCompiler
 Cmd: initializeCompiler
 Cmd: initializeCompiler
 Cmd: initializeCompiler
+=======
+  api=4 insize=16866 outsize=7789 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=16866 outsize=6181 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=16866 outsize=7573 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=16866 outsize=7765 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=16866 outsize=9485 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=16866 outsize=9789 ok=1
+>>>>>>> 68cae9712df0e4c92685e54456332e69b1aff7ec
 Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: compileComputeKernel
+  api=4 insize=14379 outsize=40209 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=14379 outsize=48265 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=14379 outsize=36205 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=14379 outsize=44081 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=14379 outsize=34441 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=14379 outsize=43677 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=14379 outsize=60965 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=14379 outsize=37373 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=14379 outsize=37437 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=14379 outsize=92621 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=26814 outsize=13793 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=6353 outsize=1341 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=1567 outsize=961 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=19063 outsize=14753 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=20454 outsize=95037 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=34758 outsize=33321 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=34758 outsize=37085 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=16360 outsize=7029 ok=1
+Cmd: compileComputeKernel
+  error: 2 plat 9 at Packages/com.unity.render-pipelines.high-definition/Runtime/Material/Decal/ShaderVariablesDecal.hlsl(18): #error "RWTexture2D" is not supported on GLES 3.0
+  error: 2 plat 9 at Packages/com.unity.render-pipelines.high-definition/Runtime/ShaderLibrary/ShaderVariablesFunctions.hlsl(135): #error "SAMPLE_TEXTURECUBE_ARRAY" is not supported on GLES 3.0
+  error: 2 plat 9 at Packages/com.unity.render-pipelines.high-definition/Runtime/ShaderLibrary/ShaderVariablesFunctions.hlsl(140): #error "SAMPLE_TEXTURECUBE_ARRAY_LOD" is not supported on GLES 3.0
+  api=9 insize=3506 outsize=0 ok=0
+Cmd: compileComputeKernel
+  api=4 insize=16866 outsize=4729 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=16866 outsize=5233 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=16866 outsize=7009 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=16866 outsize=9453 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=16866 outsize=6565 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=16866 outsize=8269 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=16866 outsize=7973 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=16866 outsize=10925 ok=1

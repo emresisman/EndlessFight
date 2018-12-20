@@ -1,6 +1,7 @@
 Base path: C:/Program Files/Unity/Editor/Data
 Cmd: initializeCompiler
 Cmd: compileComputeKernel
+<<<<<<< HEAD
   api=4 insize=13661 outsize=91085 ok=1
 Cmd: compileComputeKernel
   api=4 insize=13661 outsize=71053 ok=1
@@ -26,12 +27,48 @@ Cmd: compileComputeKernel
   api=4 insize=21751 outsize=21785 ok=1
 Cmd: compileComputeKernel
   api=4 insize=36517 outsize=32285 ok=1
+=======
+  api=4 insize=13661 outsize=100669 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=13661 outsize=42669 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=13661 outsize=31481 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=13661 outsize=49805 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=13661 outsize=45789 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=13661 outsize=72613 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=26681 outsize=16081 ok=1
+Cmd: compileComputeKernel
+  api=9 insize=4845 outsize=17345 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=6353 outsize=1037 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=1769 outsize=1861 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=18299 outsize=8553 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=18299 outsize=10549 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=19063 outsize=14377 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=2517 outsize=2573 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=1806 outsize=553 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=20370 outsize=27305 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=36517 outsize=47173 ok=1
+>>>>>>> 68cae9712df0e4c92685e54456332e69b1aff7ec
 Cmd: compileComputeKernel
   error: 2 plat 9 at Packages/com.unity.render-pipelines.high-definition/Runtime/Material/Decal/ShaderVariablesDecal.hlsl(17): #errorRWTexture2D is not supported on GLES 3.0
   error: 2 plat 9 at Packages/com.unity.render-pipelines.high-definition/Runtime/ShaderLibrary/ShaderVariablesFunctions.hlsl(128): #errorSAMPLE_TEXTURECUBE_ARRAY is not supported on GLES 3.0
   error: 2 plat 9 at Packages/com.unity.render-pipelines.high-definition/Runtime/ShaderLibrary/ShaderVariablesFunctions.hlsl(133): #errorSAMPLE_TEXTURECUBE_ARRAY_LOD is not supported on GLES 3.0
   api=9 insize=3506 outsize=0 ok=0
 Cmd: compileComputeKernel
+<<<<<<< HEAD
   api=4 insize=16866 outsize=6121 ok=1
 Cmd: compileComputeKernel
   api=4 insize=16866 outsize=6625 ok=1
@@ -76,4 +113,72 @@ Cmd: initializeCompiler
 Cmd: initializeCompiler
 Cmd: initializeCompiler
 Cmd: initializeCompiler
+=======
+  api=4 insize=16866 outsize=6893 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=16866 outsize=7029 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=16866 outsize=6805 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=16866 outsize=8773 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=16866 outsize=7957 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=16866 outsize=8077 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=16866 outsize=9941 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=16866 outsize=10245 ok=1
+>>>>>>> 68cae9712df0e4c92685e54456332e69b1aff7ec
 Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: compileComputeKernel
+  api=4 insize=14379 outsize=29945 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=14379 outsize=59389 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=14379 outsize=42749 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=14379 outsize=35801 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=14379 outsize=70993 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=14379 outsize=72069 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=14379 outsize=63473 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=26814 outsize=15525 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=26814 outsize=16041 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=7431 outsize=4897 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=6353 outsize=6497 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=1753 outsize=1861 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=19063 outsize=15261 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=21751 outsize=21785 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=20454 outsize=27305 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=34758 outsize=37085 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=34758 outsize=36293 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=13916 outsize=2265 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=16866 outsize=6505 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=16866 outsize=7321 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=16866 outsize=9673 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=16866 outsize=7261 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=16866 outsize=7069 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=16866 outsize=8773 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=16866 outsize=11145 ok=1
