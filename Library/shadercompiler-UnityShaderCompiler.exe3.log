@@ -1,3 +1,95 @@
 Base path: C:/Program Files/Unity/Editor/Data
 Cmd: initializeCompiler
+Cmd: compileComputeKernel
+  api=4 insize=13661 outsize=100669 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=13661 outsize=42669 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=13661 outsize=41657 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=13661 outsize=33957 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=13661 outsize=44197 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=13661 outsize=48101 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=13661 outsize=45397 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=26681 outsize=15773 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=2711 outsize=1517 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=2780 outsize=48145 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=4845 outsize=3733 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=1769 outsize=1861 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=18299 outsize=8925 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=19063 outsize=13729 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=36517 outsize=49889 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=17323 outsize=6877 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=14079 outsize=6277 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=1454 outsize=1461 ok=1
+Cmd: compileComputeKernel
+  error: 2 plat 9 at Packages/com.unity.render-pipelines.high-definition/Runtime/Material/Decal/ShaderVariablesDecal.hlsl(17): #errorRWTexture2D is not supported on GLES 3.0
+  error: 2 plat 9 at Packages/com.unity.render-pipelines.high-definition/Runtime/ShaderLibrary/ShaderVariablesFunctions.hlsl(128): #errorSAMPLE_TEXTURECUBE_ARRAY is not supported on GLES 3.0
+  error: 2 plat 9 at Packages/com.unity.render-pipelines.high-definition/Runtime/ShaderLibrary/ShaderVariablesFunctions.hlsl(133): #errorSAMPLE_TEXTURECUBE_ARRAY_LOD is not supported on GLES 3.0
+  api=9 insize=3506 outsize=0 ok=0
+Cmd: compileComputeKernel
+  api=4 insize=16866 outsize=6505 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=16866 outsize=7321 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=16866 outsize=6805 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=16866 outsize=8773 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=16866 outsize=7957 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=16866 outsize=8077 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=16866 outsize=9941 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=16866 outsize=10245 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=3265 outsize=4233 ok=1
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
 Cmd: initializeCompiler

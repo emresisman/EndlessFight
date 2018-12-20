@@ -1,3 +1,90 @@
 Base path: C:/Program Files/Unity/Editor/Data
 Cmd: initializeCompiler
+Cmd: compileComputeKernel
+  api=4 insize=13661 outsize=33449 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=13661 outsize=59449 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=13661 outsize=36225 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=13661 outsize=44141 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=13661 outsize=48397 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=13661 outsize=35061 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=13661 outsize=40537 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=13661 outsize=72161 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=26681 outsize=15569 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=1176 outsize=821 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=10881 outsize=9693 ok=1
+Cmd: compileComputeKernel
+  api=9 insize=4845 outsize=17345 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=18299 outsize=8553 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=18299 outsize=10769 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=19063 outsize=15261 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=21751 outsize=21741 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=1580 outsize=16105 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=20370 outsize=27305 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=36517 outsize=34813 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=1454 outsize=597 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=16866 outsize=6817 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=16866 outsize=7029 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=16866 outsize=9673 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=16866 outsize=7573 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=16866 outsize=7381 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=16866 outsize=8957 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=16866 outsize=9261 ok=1
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
 Cmd: initializeCompiler
