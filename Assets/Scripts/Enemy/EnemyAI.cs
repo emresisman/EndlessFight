@@ -6,13 +6,15 @@ public class EnemyAI : MonoBehaviour {
 
     private CameraController _cC;
     private PlayerMovement _target;
+    private Score _score;
     private float _enemySpeed;
 
 	void Start () {
         _enemySpeed = 0.1f;
         _cC = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraController>();
         _target = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
-	}
+        _score = GameObject.FindGameObjectWithTag("Player").GetComponent<Score>();
+    }
 	
 	void Update () {
         Vector3 _moveVector = _target.GetPosition() - transform.position;
@@ -37,11 +39,13 @@ public class EnemyAI : MonoBehaviour {
     {
         if (collision.gameObject.tag == "Player")
         {
+            _score.PlayerDamage();
             Destroy(this.gameObject);
             _cC.Shake();
         }
         else if(collision.gameObject.tag == "Bullet")
         {
+            _score.EnemyDead(10);
             Destroy(this.gameObject);
         }
 

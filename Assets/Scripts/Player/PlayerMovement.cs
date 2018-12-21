@@ -6,12 +6,6 @@ public class PlayerMovement : MonoBehaviour {
 
     float _horizontalSpeed, _verticalSpeed;
     public FixedJoystick _joystick;
-    private UIText _ui;
-
-    void Start()
-    {
-        _ui = GameObject.Find("Canvas").GetComponent<UIText>();
-    }
 
     void Update () {
         //_horizontalSpeed = Mathf.Clamp(Input.GetAxis("Horizontal"), -0.05f, 0.05f);
@@ -34,14 +28,14 @@ public class PlayerMovement : MonoBehaviour {
     {
         if (collision.tag == "DangerZone")
         {
-            _ui.DangerText(true);
+            UIText.DangerText(true);
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.tag == "DangerZone")
         {
-            _ui.DangerText(false);
+            UIText.DangerText(false);
         }
     }
 
