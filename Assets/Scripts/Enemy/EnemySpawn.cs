@@ -34,7 +34,6 @@ public class EnemySpawn : MonoBehaviour {
     {
         Vector3 _playerPosition = _player.GetPosition();
         GameObject _enemyTemp = Instantiate(_enemy, new Vector3(RandomX(_playerPosition, _xSpace), RandomY(_playerPosition, _ySpace), -0.01f), this.transform.rotation);
-        _enemyTemp.name = "Enemy";
     }
 
     private float RandomX(Vector3 _playerPos, float _space)
@@ -42,7 +41,7 @@ public class EnemySpawn : MonoBehaviour {
         float _randomPos;
         while (true)
         {
-            _randomPos = Random.Range(_xMin, _xMax);
+            _randomPos = Random.Range(-50f, 50f);
             if (_randomPos > _playerPos.x + _space || _randomPos < _playerPos.x - _space)
             {
                 break;
@@ -56,7 +55,7 @@ public class EnemySpawn : MonoBehaviour {
         float _randomPos;
         while (true)
         {
-            _randomPos = Random.Range(_yMin, _yMax);
+            _randomPos = Random.Range(-27f, 27f);
             if (_randomPos > _playerPos.y + _space || _randomPos < _playerPos.y - _space)
             {
                 break;
