@@ -15,7 +15,6 @@ public class Score : MonoBehaviour
             _comboTimer = 0;
         }
         _comboTimer -= Time.deltaTime;
-        _score += Time.deltaTime * 10f;
         UIText.ScoreText(_score);
         UIText.ComboText(_comboCount);
     }
