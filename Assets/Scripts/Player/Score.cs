@@ -6,6 +6,7 @@ public class Score : MonoBehaviour
 {
     private float _score = 0f, _comboTimer = 2f;
     private int _comboCount = 0;
+    public SaveManager save;
 
     void Update()
     {
@@ -14,6 +15,7 @@ public class Score : MonoBehaviour
             _comboCount = 0;
             _comboTimer = 0;
         }
+        save.Save((int)_score);
         _comboTimer -= Time.deltaTime;
         UIText.ScoreText(_score);
         UIText.ComboText(_comboCount);

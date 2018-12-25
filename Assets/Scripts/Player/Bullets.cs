@@ -6,6 +6,8 @@ public class Bullets : MonoBehaviour {
 
     private SpriteRenderer _sprites;
 
+    private string _bulletName;
+
 	void Start () {
         _sprites = this.GetComponent<SpriteRenderer>();
         _sprites.sprite=Resources.Load("Sprites/Player/Bullets/Bullet1", typeof(Sprite)) as Sprite;
@@ -14,6 +16,7 @@ public class Bullets : MonoBehaviour {
 	void Update () {
 		
 	}
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Enemy")

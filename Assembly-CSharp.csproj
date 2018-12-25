@@ -70,14 +70,13 @@
     <Compile Include="Assets\Scripts\Enemy\EnemySpawn.cs" />
     <Compile Include="Assets\Scripts\Player\Bullets.cs" />
     <Compile Include="Assets\Scripts\Player\CameraController.cs" />
-    <Compile Include="Assets\Scripts\Player\ItemPickUps.cs" />
     <Compile Include="Assets\Scripts\Player\MouseLook.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
-    <Compile Include="Assets\Scripts\Player\PlayerStats.cs" />
     <Compile Include="Assets\Scripts\Player\Score.cs" />
-    <Compile Include="Assets\Scripts\Player\Scriptable Objects\ItemPickUp_SO.cs" />
-    <Compile Include="Assets\Scripts\Player\Scriptable Objects\PlayerStats_SO.cs" />
     <Compile Include="Assets\Scripts\Player\Shooting.cs" />
+    <Compile Include="Assets\Scripts\Save\SaveHelper.cs" />
+    <Compile Include="Assets\Scripts\Save\SaveManager.cs" />
+    <Compile Include="Assets\Scripts\Save\SaveState.cs" />
     <Compile Include="Assets\Scripts\UI\UIText.cs" />
     <Reference Include="Unity.RenderPipelines.Core.Editor">
       <HintPath>C:/Users/emre.sisman/Documents/EndlessFight/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
