@@ -9,8 +9,6 @@ public class MarketManager : MonoBehaviour
     private SaveState state;
     private GunState Guns;
 
-
-    // Start is called before the first frame update
     void Start()
     {
         state = SaveManager.LoadState();
