@@ -42,8 +42,8 @@ MonoBehaviour:
     y: 0
     width: 213
     height: 662
-  m_MinSize: {x: 204, y: 224}
-  m_MaxSize: {x: 4004, y: 4024}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -73,7 +73,11 @@ MonoBehaviour:
   m_MinSize: {x: 681, y: 348}
   m_MaxSize: {x: 12006, y: 8048}
   vertical: 0
+<<<<<<< HEAD
   controlID: 107
+=======
+  controlID: 12
+>>>>>>> parent of 5101f476... Fix
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -220,7 +224,11 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 348}
   m_MaxSize: {x: 8006, y: 8048}
   vertical: 1
+<<<<<<< HEAD
   controlID: 108
+=======
+  controlID: 58
+>>>>>>> parent of 5101f476... Fix
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -245,7 +253,11 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 224}
   m_MaxSize: {x: 8006, y: 4024}
   vertical: 0
+<<<<<<< HEAD
   controlID: 109
+=======
+  controlID: 59
+>>>>>>> parent of 5101f476... Fix
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -460,20 +472,26 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/UI
+    - Assets/Scripts/Save
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts/UI
+  - Assets/Scripts/Save
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\emre.sisman\Documents\EndlessFight
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 28}
+<<<<<<< HEAD
     m_SelectedIDs: a6110000
     m_LastClickedID: 4518
     m_ExpandedIDs: 000000004811000098110000a2110000bc12000084130000f0130000e2140000cc16000008180000c4190000081a0000381a000000ca9a3b
+=======
+    m_SelectedIDs: 72380000
+    m_LastClickedID: 14450
+    m_ExpandedIDs: 00000000e22d0000302e00003a2e00004c2f000014300000803000007031000058330000943400004e360000923600005c42000000ca9a3b
+>>>>>>> parent of 5101f476... Fix
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -501,7 +519,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
     m_ExpandedIDs: 000000004811000098110000a2110000bc12000084130000f0130000e2140000cc16000008180000c4190000081a0000381a0000
+=======
+    m_ExpandedIDs: 00000000e22d0000302e00003a2e00004c2f000014300000803000007031000058330000943400004e36000092360000
+>>>>>>> parent of 5101f476... Fix
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -528,7 +550,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000022d00002a2f0000683d000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -620,9 +642,15 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
       m_SelectedIDs: 
       m_LastClickedID: 0
       m_ExpandedIDs: d4fbffff
+=======
+      m_SelectedIDs: d2600000
+      m_LastClickedID: 24786
+      m_ExpandedIDs: eab7fffff4b7ffffd8bbfffff4bbffffa6bcffffc2bcffffd2bcfffffebfffff8ac2ffffd4fbffff885f000040610000
+>>>>>>> parent of 5101f476... Fix
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
