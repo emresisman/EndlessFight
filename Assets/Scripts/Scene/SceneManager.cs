@@ -5,8 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class SceneManager : MonoBehaviour
 {
-    
-    
     //In-game Buttons
 
     public void RetryClick()
@@ -43,4 +41,8 @@ public class SceneManager : MonoBehaviour
 
     }
 
+    public void BuyClick(BodyState BodyData)
+    {
+
+    }
 }

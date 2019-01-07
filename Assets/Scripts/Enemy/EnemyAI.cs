@@ -8,6 +8,7 @@ public class EnemyAI : MonoBehaviour {
     private PlayerMovement _target;
     private Score _score;
     private float _enemySpeed;
+    public int _health = 4;
 
 	void Start () {
         _enemySpeed = 0.1f;
@@ -31,7 +32,12 @@ public class EnemyAI : MonoBehaviour {
         }
         else if (collision.gameObject.tag == "Bullet")
         {
-            Destroy(this.gameObject);
+            _health -= SaveManager.state.currentDamage;
+            if (_health <= 0)
+            {
+                Destroy(this.gameObject);
+                _score.EnemyDead(10);
+            }
         }
     }
 
@@ -45,9 +51,12 @@ public class EnemyAI : MonoBehaviour {
         }
         else if(collision.gameObject.tag == "Bullet")
         {
-            _score.EnemyDead(10);
-            Destroy(this.gameObject);
+            _health -= SaveManager.state.currentDamage;
+            if (_health <= 0)
+            {
+                Destroy(this.gameObject);
+                _score.EnemyDead(10);
+            }
         }
-
     }
 }

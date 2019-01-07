@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviour {
         if (moveVector != Vector3.zero)
         {
             transform.rotation = Quaternion.LookRotation(Vector3.forward, moveVector);
-            transform.Translate(moveVector * 8f * Time.deltaTime, Space.World);
+            transform.Translate(moveVector * SaveManager.state.currentSpeed * Time.deltaTime, Space.World);
         }
     }
 
