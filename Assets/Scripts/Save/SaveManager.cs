@@ -5,37 +5,45 @@ using UnityEngine;
 public class SaveManager : MonoBehaviour
 {
     public static SaveManager Instance;
-    public static SaveState state;
+    public static SaveState saveState;
+    public static GunState gunState;
+    public static BodyState bodyState;
 
     private void Awake()
     {
         //ResetData();
         Load();
+        SaveReader.Load(gunState, bodyState, saveState);
         DontDestroyOnLoad(gameObject);
         Instance = this;
-        
     }
 
     public static void Save()
     {
-        PlayerPrefs.SetString("Save", SaveHelper.Serialize<SaveState>(state));
+        PlayerPrefs.SetString("Save", SaveHelper.Serialize<SaveState>(saveState));
+        PlayerPrefs.SetString("SaveGun", SaveHelper.Serialize<GunState>(gunState));
+        PlayerPrefs.SetString("SaveBody", SaveHelper.Serialize<BodyState>(bodyState));
     }
 
     public static void Save(int score)
     {
-        state.highScore = score;
-        PlayerPrefs.SetString("Save", SaveHelper.Serialize<SaveState>(state));
+        saveState.highScore = score;
+        PlayerPrefs.SetString("Save", SaveHelper.Serialize<SaveState>(saveState));
     }
 
     public static void Load()
     {
         if (PlayerPrefs.HasKey("Save"))
         {
-            state = SaveHelper.DeserializeSave<SaveState>(PlayerPrefs.GetString("Save"));
+            saveState = SaveHelper.DeserializeSave<SaveState>(PlayerPrefs.GetString("Save"));
+            gunState = SaveHelper.DeserializeGun<GunState>(PlayerPrefs.GetString("SaveGun"));
+            bodyState = SaveHelper.DeserializeBody<BodyState>(PlayerPrefs.GetString("SaveBody"));
         }
         else
         {
-            state = new SaveState();
+            saveState = new SaveState();
+            gunState = new GunState();
+            bodyState = new BodyState();
             Save();
         }
     }
@@ -55,5 +63,7 @@ public class SaveManager : MonoBehaviour
     public static void ResetData()
     {
         PlayerPrefs.DeleteKey("Save");
+        PlayerPrefs.DeleteKey("SaveGun");
+        PlayerPrefs.DeleteKey("SaveBody");
     }
 }

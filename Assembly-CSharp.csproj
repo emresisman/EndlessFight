@@ -78,6 +78,7 @@
     <Compile Include="Assets\Scripts\Save\GunState.cs" />
     <Compile Include="Assets\Scripts\Save\SaveHelper.cs" />
     <Compile Include="Assets\Scripts\Save\SaveManager.cs" />
+    <Compile Include="Assets\Scripts\Save\SaveReader.cs" />
     <Compile Include="Assets\Scripts\Save\SaveState.cs" />
     <Compile Include="Assets\Scripts\Scene\SceneManager.cs" />
     <Compile Include="Assets\Scripts\UI\MarketManager.cs" />

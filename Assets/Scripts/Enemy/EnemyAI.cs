@@ -32,7 +32,7 @@ public class EnemyAI : MonoBehaviour {
         }
         else if (collision.gameObject.tag == "Bullet")
         {
-            _health -= SaveManager.state.currentDamage;
+            _health -= SaveReader.damage;
             if (_health <= 0)
             {
                 Destroy(this.gameObject);
@@ -51,7 +51,7 @@ public class EnemyAI : MonoBehaviour {
         }
         else if(collision.gameObject.tag == "Bullet")
         {
-            _health -= SaveManager.state.currentDamage;
+            _health -= SaveReader.damage;
             if (_health <= 0)
             {
                 Destroy(this.gameObject);

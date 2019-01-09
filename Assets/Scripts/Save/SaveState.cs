@@ -11,10 +11,5 @@ public class SaveState : ScriptableObject
     public int level = 1;
     public int baseDamage = 1;
     public int baseHealth = 5;
-    public int baseSpeed = 6;
-    public int currentDamage = 1;
-    public int currentHealth = 5;
-    public int currentSpeed = 6;
-    public string currentGun = "Gun1";
-    public string currentBody = "Body1";
+    public float baseSpeed = 6;
 }
