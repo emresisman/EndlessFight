@@ -38,11 +38,17 @@ public class SceneManager : MonoBehaviour
 
     public void BuyClick(GunState GunData)
     {
-
+        if (SaveReader.money >= GunData.cost && GunData.isLocked)
+        {
+            GunData.isLocked = false;
+        }
     }
 
     public void BuyClick(BodyState BodyData)
     {
-
+        if (SaveReader.money >= BodyData.cost && BodyData.isLocked)
+        {
+            BodyData.isLocked = false;
+        }
     }
 }

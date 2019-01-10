@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SaveReader : MonoBehaviour
+public class SaveReader
 {
     public static int money;
     public static int highScore;
@@ -16,40 +16,20 @@ public class SaveReader : MonoBehaviour
     public static int gunIndex;
     public static int bodyIndex;
 
-    public static void Load(GunState gunState, BodyState bodyState, SaveState saveState)
+    public static void Load(SaveState saveState)
     {
-        DetectGun(gunState);
-        DetectBody(bodyState);
+        GunState[] guns = Resources.LoadAll<GunState>("DataFiles/Guns");
+        BodyState[] bodies = Resources.LoadAll<BodyState>("DataFiles/Bodies");
         money = saveState.cost;
         highScore = saveState.highScore;
         level = saveState.level;
         experience = saveState.experience;
-        damage = saveState.baseDamage + gunState.damage[gunIndex];
-        health = saveState.baseHealth + bodyState.health[bodyIndex];
-        speed = bodyState.movementSpeed[bodyIndex];
-        bulletSpeed = gunState.bulletSpeed[gunIndex];
-        fireRate = gunState.fireRate[gunIndex];
-    }
-
-    static void DetectGun(GunState gunState)
-    {
-        for (int i = 0; i < gunState.isUse.Length; i++)
-        {
-            if (gunState.isUse[i])
-            {
-                gunIndex = i;
-            }
-        }
-    }
-
-    static void DetectBody(BodyState bodyState)
-    {
-        for (int i = 0; i < bodyState.isUse.Length; i++)
-        {
-            if (bodyState.isUse[i])
-            {
-                bodyIndex = i;
-            }
-        }
+        damage = saveState.baseDamage + guns[saveState.gunID].damage;
+        Debug.Log(saveState.gunID);
+        Debug.Log(damage);
+        health = saveState.baseHealth + bodies[saveState.bodyID].health;
+        speed = bodies[saveState.bodyID].movementSpeed;
+        bulletSpeed = guns[saveState.gunID].bulletSpeed;
+        fireRate = guns[saveState.gunID].fireRate;
     }
 }

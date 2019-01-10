@@ -13,7 +13,7 @@ public class MarketManager : MonoBehaviour
     void Start()
     {
         state = SaveManager.LoadState();
-        money = state.cost;
+        money = SaveReader.money;
         CheckStats();
         //Guns = GameObject.Find("GunClick").GetComponent<GunState>();
     }

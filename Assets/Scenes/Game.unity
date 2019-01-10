@@ -1104,6 +1104,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df1dbfa484425af4baac8ca1fb118548, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  saveState:
+    cost: 0
+    highScore: 0
+    experience: 0
+    level: 1
+    baseDamage: 1
+    baseHealth: 5
+    gunID: 2
+    bodyID: 0
 --- !u!4 &445499112
 Transform:
   m_ObjectHideFlags: 0
