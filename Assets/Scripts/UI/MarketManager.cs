@@ -8,14 +8,14 @@ public class MarketManager : MonoBehaviour
     int money;
     private SaveState state;
     private GunState Guns;
-    Button btn;
+    public Text text;
 
     void Start()
     {
         state = SaveManager.LoadState();
         money = SaveReader.money;
         CheckStats();
-        //Guns = GameObject.Find("GunClick").GetComponent<GunState>();
+        text.text = SaveReader.money.ToString();
     }
 
     void CheckStats()

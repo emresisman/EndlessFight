@@ -9,9 +9,8 @@ public class SaveManager : MonoBehaviour
 
     private void Awake()
     {
-        Instance = this;
-        Save();
         //ResetData();
+        Instance = this;
         Load();
         SaveReader.Load(saveState);
         DontDestroyOnLoad(gameObject);
@@ -19,13 +18,6 @@ public class SaveManager : MonoBehaviour
 
     public void Save()
     {
-        PlayerPrefs.SetString("Save", SaveHelper.Serialize<SaveState>(saveState));
-
-    }
-
-    public void Save(int score)
-    {
-        saveState.highScore = score;
         PlayerPrefs.SetString("Save", SaveHelper.Serialize<SaveState>(saveState));
     }
 
@@ -49,7 +41,7 @@ public class SaveManager : MonoBehaviour
             return SaveHelper.DeserializeSave<SaveState>(PlayerPrefs.GetString("Save"));
         }
         else
-        {
+        { 
             return new SaveState();
         }
     }
@@ -57,6 +49,5 @@ public class SaveManager : MonoBehaviour
     public static void ResetData()
     {
         PlayerPrefs.DeleteKey("Save");
-
     }
 }

@@ -25,11 +25,15 @@ public class SaveReader
         level = saveState.level;
         experience = saveState.experience;
         damage = saveState.baseDamage + guns[saveState.gunID].damage;
-        Debug.Log(saveState.gunID);
-        Debug.Log(damage);
         health = saveState.baseHealth + bodies[saveState.bodyID].health;
         speed = bodies[saveState.bodyID].movementSpeed;
         bulletSpeed = guns[saveState.gunID].bulletSpeed;
         fireRate = guns[saveState.gunID].fireRate;
+    }
+
+    void SetHealth(int health)
+    {
+        PlayerMovement pm = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
+        pm.Health = health;
     }
 }

@@ -51,4 +51,20 @@ public class SceneManager : MonoBehaviour
             BodyData.isLocked = false;
         }
     }
+
+    public void UseClick(GunState GunData)
+    {
+        if (!GunData.isLocked)
+        {
+            GunData.isLocked = false;
+        }
+    }
+
+    public void UseClick(BodyState BodyData)
+    {
+        if (SaveReader.money >= BodyData.cost && BodyData.isLocked)
+        {
+            BodyData.isLocked = false;
+        }
+    }
 }

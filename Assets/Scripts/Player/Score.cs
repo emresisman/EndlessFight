@@ -5,13 +5,13 @@ using UnityEngine;
 public class Score : MonoBehaviour
 {
     private float _score = 0f, _comboTimer = 2f;
-    private int _comboCount = 0;
+    private int _comboCount = 1;
     //public SaveManager save;
 
     void Update()
     {
         if (_comboTimer <= 0)
-        {
+        {  
             _comboCount = 0;
             _comboTimer = 0;
         }
@@ -28,10 +28,8 @@ public class Score : MonoBehaviour
         _comboTimer = 2f;
     }
 
-    public void PlayerDamage()
+    public int GetScore()
     {
-        _score -= 10;
-        _comboCount = 0;
-        _comboTimer = 0f;
+        return (int)_score;
     }
 }

@@ -23,7 +23,7 @@ public class EnemyAI : MonoBehaviour {
         this.transform.Translate(_moveVector * _enemySpeed, Space.World);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    /*private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
@@ -39,15 +39,15 @@ public class EnemyAI : MonoBehaviour {
                 _score.EnemyDead(10);
             }
         }
-    }
+    }*/
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            _score.PlayerDamage();
             Destroy(this.gameObject);
             _cC.Shake();
+            _target.TakeDamage(1);
         }
         else if(collision.gameObject.tag == "Bullet")
         {

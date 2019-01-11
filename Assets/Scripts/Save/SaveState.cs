@@ -11,6 +11,6 @@ public class SaveState
     public int level = 1;
     public int baseDamage = 1;
     public int baseHealth = 5;
-    public int gunID;
-    public int bodyID;
+    public int gunID = 0;
+    public int bodyID = 0;
 }

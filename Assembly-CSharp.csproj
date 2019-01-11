@@ -83,7 +83,6 @@
     <Compile Include="Assets\Scripts\Scene\SceneManager.cs" />
     <Compile Include="Assets\Scripts\UI\MarketManager.cs" />
     <Compile Include="Assets\Scripts\UI\UIText.cs" />
-    <None Include="Assets\test.xml" />
     <Reference Include="Unity.RenderPipelines.Core.Editor">
       <HintPath>C:/Users/emre.sisman/Documents/EndlessFight/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
     </Reference>
