@@ -3232,6 +3232,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b46faf4ce9f544e4187eed653bfe17b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _setdangerText: {fileID: 1439680123}
+  _setscoreText: {fileID: 1167112702}
+  _setcomboText: {fileID: 2141188489}
+  _sethighScoreText: {fileID: 1122299983}
 --- !u!1 &1122299982
 GameObject:
   m_ObjectHideFlags: 0
@@ -3245,7 +3249,7 @@ GameObject:
   - component: {fileID: 1122299983}
   - component: {fileID: 1122299984}
   m_Layer: 5
-  m_Name: HighScore
+  m_Name: HighScoreText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

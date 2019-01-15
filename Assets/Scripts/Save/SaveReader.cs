@@ -15,11 +15,15 @@ public class SaveReader
     public static float fireRate;
     public static int gunIndex;
     public static int bodyIndex;
+    public static int gunCount;
+    public static int bodyCount;
 
     public static void Load(SaveState saveState)
     {
         GunState[] guns = Resources.LoadAll<GunState>("DataFiles/Guns");
         BodyState[] bodies = Resources.LoadAll<BodyState>("DataFiles/Bodies");
+        gunCount = guns.Length;
+        bodyCount = bodies.Length;
         money = saveState.cost;
         highScore = saveState.highScore;
         level = saveState.level;

@@ -5,15 +5,18 @@ using UnityEngine.UI;
 
 public class UIText : MonoBehaviour {
 
-    private static Text _dangerText, _scoreText, _comboText;
+    private static Text _dangerText, _scoreText, _comboText, _highScoreText;
+    public Text _setdangerText, _setscoreText, _setcomboText, _sethighScoreText;
     private static float _dangerTimer = 3;
     private static bool _isDanger = false;
 
     void Start()
     {
-        _dangerText = this.transform.GetChild(2).GetComponent<Text>();
-        _scoreText = this.transform.GetChild(3).GetComponent<Text>();
-        _comboText = this.transform.GetChild(4).GetComponent<Text>();
+        _dangerText = _setdangerText;
+        _scoreText = _setscoreText;
+        _comboText = _setcomboText;
+        _highScoreText = _sethighScoreText;
+        _highScoreText.text = SaveReader.highScore.ToString() + " : " + SaveReader.money.ToString();
         _dangerText.gameObject.SetActive(false);
     }
 
@@ -25,11 +28,12 @@ public class UIText : MonoBehaviour {
             _dangerText.text = "You are in the Danger Zone \n You should leave in " + (int)_dangerTimer + " seconds.";
             _dangerText.gameObject.SetActive(true);
         }
-        else {
+        else
+        {
             _dangerTimer = 3f;
             _dangerText.text = "";
             _dangerText.gameObject.SetActive(false);
-        } 
+        }
         if (_dangerTimer <= 0) Time.timeScale = 0f;
     }
 

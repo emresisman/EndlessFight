@@ -8,7 +8,7 @@ public class EnemyAI : MonoBehaviour {
     private PlayerMovement _target;
     private Score _score;
     private float _enemySpeed;
-    public int _health = 10;
+    public int _health = 2;
 
 	void Start () {
         _enemySpeed = 0.1f;

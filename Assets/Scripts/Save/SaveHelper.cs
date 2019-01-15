@@ -40,12 +40,14 @@ public static class SaveHelper
         StringReader reader = new StringReader(toDeserialize);
         return (SaveState)xml.Deserialize(reader);
     }
+
     public static GunState DeserializeGun<T>(string toDeserialize)
     {
         XmlSerializer xml = new XmlSerializer(typeof(GunState));
         StringReader reader = new StringReader(toDeserialize);
         return (GunState)xml.Deserialize(reader);
     }
+
     public static BodyState DeserializeBody<T>(string toDeserialize)
     {
         XmlSerializer xml = new XmlSerializer(typeof(BodyState));
@@ -53,10 +55,10 @@ public static class SaveHelper
         return (BodyState)xml.Deserialize(reader);
     }
 
-    public static void StopGame(int score)
+    public static void StopGame(int score, int cost)
     {
         SaveManager sm = GameObject.Find("SaveManager").GetComponent<SaveManager>();
-        sm.saveState.cost = (int)score / 10;
+        sm.saveState.cost += cost;
         if (score > sm.saveState.highScore)
         {
             sm.saveState.highScore = score;

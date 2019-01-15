@@ -64,7 +64,7 @@ public class PlayerMovement : MonoBehaviour {
         if (Health <= 0)
         {
             Score s = this.gameObject.GetComponent<Score>();
-            SaveHelper.StopGame(s.GetScore());
+            SaveHelper.StopGame(s.GetScore(), s.GetMoney());
         }
     }
 }
