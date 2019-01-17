@@ -17,11 +17,13 @@ public class SaveReader
     public static int bodyIndex;
     public static int gunCount;
     public static int bodyCount;
+    public static GunState[] guns;
+    public static BodyState[] bodies;
 
     public static void Load(SaveState saveState)
     {
-        GunState[] guns = Resources.LoadAll<GunState>("DataFiles/Guns");
-        BodyState[] bodies = Resources.LoadAll<BodyState>("DataFiles/Bodies");
+        guns = Resources.LoadAll<GunState>("DataFiles/Guns");
+        bodies = Resources.LoadAll<BodyState>("DataFiles/Bodies");
         gunCount = guns.Length;
         bodyCount = bodies.Length;
         money = saveState.cost;
