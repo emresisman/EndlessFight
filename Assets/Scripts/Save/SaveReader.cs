@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SaveReader
 {
@@ -19,11 +20,15 @@ public class SaveReader
     public static int bodyCount;
     public static GunState[] guns;
     public static BodyState[] bodies;
+    public static Sprite[] gunSprites;
+    public static Sprite[] bodySprites;
 
     public static void Load(SaveState saveState)
     {
         guns = Resources.LoadAll<GunState>("DataFiles/Guns");
         bodies = Resources.LoadAll<BodyState>("DataFiles/Bodies");
+        gunSprites = Resources.LoadAll<Sprite>("Sprites/UI/Guns");
+        bodySprites = Resources.LoadAll<Sprite>("Sprites/UI/Body");
         gunCount = guns.Length;
         bodyCount = bodies.Length;
         money = saveState.cost;

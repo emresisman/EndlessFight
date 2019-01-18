@@ -81,6 +81,7 @@
     <Compile Include="Assets\Scripts\Save\SaveReader.cs" />
     <Compile Include="Assets\Scripts\Save\SaveState.cs" />
     <Compile Include="Assets\Scripts\Scene\SceneManager.cs" />
+    <Compile Include="Assets\Scripts\UI\MarketItemClickAction.cs" />
     <Compile Include="Assets\Scripts\UI\MarketManager.cs" />
     <Compile Include="Assets\Scripts\UI\UIText.cs" />
     <Reference Include="Unity.RenderPipelines.Core.Editor">
