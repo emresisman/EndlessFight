@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class SceneManager : MonoBehaviour
 {
+    public MarketManager mm;
+    public SaveManager sm;
     //In-game Buttons
 
     public void RetryClick()
@@ -41,6 +43,9 @@ public class SceneManager : MonoBehaviour
         if (SaveReader.money >= GunData.cost && GunData.isLocked)
         {
             GunData.isLocked = false;
+            
+            SaveReader.money -= GunData.cost;
+            mm.UpdateMarket();
         }
     }
 
@@ -49,6 +54,8 @@ public class SceneManager : MonoBehaviour
         if (SaveReader.money >= BodyData.cost && BodyData.isLocked)
         {
             BodyData.isLocked = false;
+            SaveReader.money -= BodyData.cost;
+            mm.UpdateMarket();
         }
     }
 
@@ -57,6 +64,8 @@ public class SceneManager : MonoBehaviour
         if (!GunData.isLocked)
         {
             GunData.isLocked = false;
+            SaveReader.gunIndex = GunData.id;
+            mm.UpdateMarket();
         }
     }
 
@@ -65,6 +74,8 @@ public class SceneManager : MonoBehaviour
         if (SaveReader.money >= BodyData.cost && BodyData.isLocked)
         {
             BodyData.isLocked = false;
+            SaveReader.bodyIndex = BodyData.id;
+            mm.UpdateMarket();
         }
     }
 }

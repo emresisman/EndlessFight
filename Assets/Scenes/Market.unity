@@ -164,6 +164,10 @@ MonoBehaviour:
     baseHealth: 5
     gunID: 0
     bodyID: 0
+  guns: []
+  bodies: []
+  gun: 
+  body: 
 --- !u!1 &262455714
 GameObject:
   m_ObjectHideFlags: 0
@@ -1174,6 +1178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a1c3a6abcecb8f4283fa558a17d0def, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mm: {fileID: 1847627097}
 --- !u!4 &1159685087
 Transform:
   m_ObjectHideFlags: 0
@@ -1226,8 +1231,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 285}
-  m_SizeDelta: {x: -100, y: -670}
+  m_AnchoredPosition: {x: 0, y: 280}
+  m_SizeDelta: {x: -100, y: -660}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1196761869
 MonoBehaviour:
@@ -2036,8 +2041,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -185}
-  m_SizeDelta: {x: -100, y: -650}
+  m_AnchoredPosition: {x: 0, y: -190}
+  m_SizeDelta: {x: -100, y: -660}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1822245277
 MonoBehaviour:
@@ -2138,12 +2143,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moneyText: {fileID: 1881377314}
+  buttonText: {fileID: 0}
   itemPrefab: {fileID: 7531322300832127386, guid: af90b77bbb475284e96ee7c1f2978872,
     type: 3}
   gunPanel: {fileID: 1196761869}
   bodyPanel: {fileID: 1822245277}
   popUpGun: {fileID: 1612730989}
   popUpBody: {fileID: 2012921734}
+  sm: {fileID: 1159685086}
 --- !u!4 &1847627098
 Transform:
   m_ObjectHideFlags: 0

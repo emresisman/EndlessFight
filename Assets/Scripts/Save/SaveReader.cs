@@ -25,8 +25,6 @@ public class SaveReader
 
     public static void Load(SaveState saveState)
     {
-        guns = Resources.LoadAll<GunState>("DataFiles/Guns");
-        bodies = Resources.LoadAll<BodyState>("DataFiles/Bodies");
         gunSprites = Resources.LoadAll<Sprite>("Sprites/UI/Guns");
         bodySprites = Resources.LoadAll<Sprite>("Sprites/UI/Body");
         gunCount = guns.Length;
@@ -40,6 +38,16 @@ public class SaveReader
         speed = bodies[saveState.bodyID].movementSpeed;
         bulletSpeed = guns[saveState.gunID].bulletSpeed;
         fireRate = guns[saveState.gunID].fireRate;
+    }
+
+    public static void LoadGun(GunState[] gunState)
+    {
+        guns = gunState;
+    }
+
+    public static void LoadBody(BodyState[] bodyState)
+    {
+        bodies = bodyState;
     }
 
     void SetHealth(int health)

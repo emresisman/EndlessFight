@@ -1,6 +1,6 @@
 Android
 PlayerPath?
-C:/Users/emre.sisman/Desktop/EndlessFight1.apk
+C:/Users/emre.sisman/Desktop/EndlessFight2.apk
 SceneListBegin?
 Assets/Scenes/Menu.unity
 Assets/Scenes/Market.unity
@@ -149,6 +149,7 @@ b9651af6366753ef6c81947131988271 Assembly-CSharp.dll:.SaveManager
 5e1eefcd5106de6c2e85908a3b2d3f04 Unity.RenderPipelines.HighDefinition.Runtime.dll:UnityEngine.Experimental.Rendering.UI.DebugUIHandlerToggle
 085d670eaf7a5d3f326f633590922d9f Assembly-CSharp.dll:.EnemyAI
 61b9d9b6f4b6a222dfea8b131b3d3227 Unity.Postprocessing.Runtime.dll:UnityEngine.Rendering.PostProcessing.ChromaticAberration
+7bf123f51de7d1259cafb8f8c3600196 Assembly-CSharp.dll:.MarketItemClickAction
 f8344f99efa5f3909db3fb40406c024d Assembly-CSharp.dll:.FloatingJoystick
 d541634573a242a8ae5d027d3ee254a5 Unity.RenderPipelines.HighDefinition.Runtime.dll:UnityEngine.Experimental.Rendering.HDPipeline.LinearFog
 51b05e403ce1da1805851f42af02f4bb Unity.RenderPipelines.HighDefinition.Runtime.dll:UnityEngine.Experimental.Rendering.UI.DebugUIHandlerGroup
@@ -234,7 +235,7 @@ ca420fb5eecc33fe661f973f5346ae2e Assembly-CSharp.dll:.PlayerMovement
 8d35f16c5022311c6f4d9432be73bfcf Unity.RenderPipelines.HighDefinition.Runtime.dll:UnityEngine.Experimental.Rendering.UI.DebugUIHandlerUIntField
 d791aa6007fa3640be1164ea75bb087d Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet
 ef6ed3645954a83c440201bfb3d0373f Unity.RenderPipelines.HighDefinition.Runtime.dll:UnityEngine.Experimental.Rendering.HDPipeline.VolumetricLightingController
-962b6595928ffdb2dffb80252a16ed6e Assembly-CSharp.dll:.MarketManager
+01534da3e76024345a7a091f5a5219ce Assembly-CSharp.dll:.MarketManager
 d5630f96bd5a6a6eed7e1754c3fb8703 Unity.Postprocessing.Runtime.dll:UnityEngine.Rendering.PostProcessing.PostProcessVolume
 89229a620f85ef21de336ab85a13d351 Unity.RenderPipelines.HighDefinition.Runtime.dll:UnityEngine.Experimental.Rendering.UI.DebugUIHandlerCanvas
 0daac49601f88acfeb3f6eb25235be09 Unity.RenderPipelines.HighDefinition.Runtime.dll:UnityEngine.Experimental.Rendering.HDPipeline.HDRISky

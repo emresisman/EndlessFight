@@ -18,17 +18,9 @@ public static class SaveHelper
         return writer.ToString();
     }
 
-    public static string Serialize<T>(GunState toSerialize)
+    public static string Serialize<T>(bool[] toSerialize)
     {
-        XmlSerializer xml = new XmlSerializer(typeof(GunState));
-        StringWriter writer = new StringWriter();
-        xml.Serialize(writer, toSerialize);
-        return writer.ToString();
-    }
-
-    public static string Serialize<T>(BodyState toSerialize)
-    {
-        XmlSerializer xml = new XmlSerializer(typeof(BodyState));
+        XmlSerializer xml = new XmlSerializer(typeof(bool[]));
         StringWriter writer = new StringWriter();
         xml.Serialize(writer, toSerialize);
         return writer.ToString();
@@ -41,18 +33,11 @@ public static class SaveHelper
         return (SaveState)xml.Deserialize(reader);
     }
 
-    public static GunState DeserializeGun<T>(string toDeserialize)
+    public static bool[] Deserialize<T>(string toDeserialize)
     {
-        XmlSerializer xml = new XmlSerializer(typeof(GunState));
+        XmlSerializer xml = new XmlSerializer(typeof(bool[]));
         StringReader reader = new StringReader(toDeserialize);
-        return (GunState)xml.Deserialize(reader);
-    }
-
-    public static BodyState DeserializeBody<T>(string toDeserialize)
-    {
-        XmlSerializer xml = new XmlSerializer(typeof(BodyState));
-        StringReader reader = new StringReader(toDeserialize);
-        return (BodyState)xml.Deserialize(reader);
+        return (bool[])xml.Deserialize(reader);
     }
 
     public static void StopGame(int score, int cost)
