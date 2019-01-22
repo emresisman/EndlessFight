@@ -1,6 +1,6 @@
 Android
 PlayerPath?
-C:/Users/emre.sisman/Desktop/EndlessFight2.apk
+C:/Users/emre.sisman/Desktop/EndlessFight.apk
 SceneListBegin?
 Assets/Scenes/Menu.unity
 Assets/Scenes/Market.unity
@@ -140,7 +140,7 @@ f8344f99efa5f3909db3fb40406c024d Assembly-CSharp.dll:.FixedJoystick
 d251bf88db6c95a6b1aa0b69298da9ef UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 ea768af7fe4ca0f18f65e30dd717c8dc Unity.RenderPipelines.HighDefinition.Runtime.dll:UnityEngine.Experimental.Rendering.UI.UIFoldout
 b48c8d99d321541a536d9c6093f31c5d Assembly-CSharp.dll:.Player2DExample
-b9651af6366753ef6c81947131988271 Assembly-CSharp.dll:.SaveManager
+f9f6d8f0632dcff00d4208f55d2db694 Assembly-CSharp.dll:.SaveManager
 303ad70ce203ad874efe2965d0fbcff9 Unity.Analytics.Tracker.dll:UnityEngine.Analytics.AnalyticsEventTracker
 7fb9de8dcf73854b6b328eca1f7a6e6d Unity.Analytics.Tracker.dll:UnityEngine.Analytics.AnalyticsTracker
 695f2b18a0423e07264ff345d80e22e7 Assembly-CSharp.dll:.Shooting
@@ -195,7 +195,7 @@ ad9173d3a69d99153f38ed4b62226129 UnityEngine.Networking.dll:UnityEngine.Networki
 aa82b3ce4c0c9b227036c0337315c5d3 Unity.TextMeshPro.dll:TMPro.TMP_FontAsset
 f79e983672d079ff24eee15484fb74b8 Unity.RenderPipelines.HighDefinition.Runtime.dll:UnityEngine.Experimental.Rendering.UI.DebugUIHandlerColor
 e51c09a4cc447f11db225afcd8e3e490 Unity.TextMeshPro.dll:TMPro.TMP_Settings
-71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.SceneManager
+bdfa264156f6095d843431e6049b5d02 Assembly-CSharp.dll:.SceneManager
 0c6ffb0777bba810b63176033c2c4e2f Unity.RenderPipelines.HighDefinition.Runtime.dll:UnityEngine.Experimental.Rendering.HDPipeline.ReflectionProxyVolumeComponent
 ceca9a616440e4a907294c1792e32c1f Unity.RenderPipelines.HighDefinition.Runtime.dll:UnityEngine.Experimental.Rendering.HDPipeline.HDShadowSettings
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.Advertisements.dll:UnityEngine.Advertisements.CallbackExecutor
@@ -235,7 +235,7 @@ ca420fb5eecc33fe661f973f5346ae2e Assembly-CSharp.dll:.PlayerMovement
 8d35f16c5022311c6f4d9432be73bfcf Unity.RenderPipelines.HighDefinition.Runtime.dll:UnityEngine.Experimental.Rendering.UI.DebugUIHandlerUIntField
 d791aa6007fa3640be1164ea75bb087d Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet
 ef6ed3645954a83c440201bfb3d0373f Unity.RenderPipelines.HighDefinition.Runtime.dll:UnityEngine.Experimental.Rendering.HDPipeline.VolumetricLightingController
-01534da3e76024345a7a091f5a5219ce Assembly-CSharp.dll:.MarketManager
+9afeb5ba53e7218e72b8a6b96ac1bc0d Assembly-CSharp.dll:.MarketManager
 d5630f96bd5a6a6eed7e1754c3fb8703 Unity.Postprocessing.Runtime.dll:UnityEngine.Rendering.PostProcessing.PostProcessVolume
 89229a620f85ef21de336ab85a13d351 Unity.RenderPipelines.HighDefinition.Runtime.dll:UnityEngine.Experimental.Rendering.UI.DebugUIHandlerCanvas
 0daac49601f88acfeb3f6eb25235be09 Unity.RenderPipelines.HighDefinition.Runtime.dll:UnityEngine.Experimental.Rendering.HDPipeline.HDRISky

@@ -108,33 +108,54 @@ public class MarketManager : MonoBehaviour
         {
             GunState gun = SaveReader.guns[i];
             Button btn = buyButtonWeapon[i].transform.GetChild(4).GetComponent<Button>();
-            if (!SaveReader.guns[i].isLocked)
+            if (!gun.isLocked)
             {
+                if (i == SaveReader.gunIndex)
+                {
+                    btn.transform.GetChild(0).GetComponent<Text>().text = " ";
+                    btn.GetComponent<Image>().enabled = false;
+                }
+                else
+                {
+                    btn.transform.GetChild(0).GetComponent<Text>().text = "Use";
+                    btn.GetComponent<Image>().enabled = true;
+                }
+                btn.onClick.RemoveAllListeners();
                 btn.onClick.AddListener(delegate { sm.UseClick(gun); });
                 btn.GetComponent<Image>().color = useColor;
-                btn.transform.GetChild(0).GetComponent<Text>().text = "Use";
             }
             else
             {
-                btn.onClick.AddListener(delegate { sm.BuyClick(gun); });
+                btn.onClick.RemoveAllListeners();
+                btn.onClick.AddListener(delegate { sm.BuyClick(gun, gun.id); });
             }
         }
         for (int i = 0; i < buyButtonBody.Length; i++)
         {
             BodyState body = SaveReader.bodies[i];
             Button btn = buyButtonBody[i].transform.GetChild(4).GetComponent<Button>();
-            if (!SaveReader.bodies[i].isLocked)
+            if (!body.isLocked)
             {
+                if (i == SaveReader.bodyIndex)
+                {
+                    btn.transform.GetChild(0).GetComponent<Text>().text = " ";
+                    btn.GetComponent<Image>().enabled = false;
+                }
+                else
+                {
+                    btn.transform.GetChild(0).GetComponent<Text>().text = "Use";
+                    btn.GetComponent<Image>().enabled = true;
+                }
+                btn.onClick.RemoveAllListeners();
                 btn.onClick.AddListener(delegate { sm.UseClick(body); });
                 btn.GetComponent<Image>().color = useColor;
-                btn.transform.GetChild(0).GetComponent<Text>().text = "Use";
             }
             else
             {
-                btn.onClick.AddListener(delegate { sm.BuyClick(body); });
+                btn.onClick.RemoveAllListeners();
+                btn.onClick.AddListener(delegate { sm.BuyClick(body, body.id); });
             }
         }
-
     }
 
     /*public void Popup(bool onClick, GameObject thisObject)

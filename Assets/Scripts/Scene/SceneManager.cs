@@ -38,23 +38,28 @@ public class SceneManager : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadScene(0);
     }
 
-    public void BuyClick(GunState GunData)
+    public void BuyClick(GunState GunData, int index)
     {
         if (SaveReader.money >= GunData.cost && GunData.isLocked)
         {
+            sm.guns[index].isLocked = false;
             GunData.isLocked = false;
-            
             SaveReader.money -= GunData.cost;
+            sm.Save();
+            SaveReader.Load();
             mm.UpdateMarket();
         }
     }
 
-    public void BuyClick(BodyState BodyData)
+    public void BuyClick(BodyState BodyData, int index)
     {
         if (SaveReader.money >= BodyData.cost && BodyData.isLocked)
         {
+            sm.bodies[index].isLocked = false;
             BodyData.isLocked = false;
             SaveReader.money -= BodyData.cost;
+            sm.Save();
+            SaveReader.Load();
             mm.UpdateMarket();
         }
     }
@@ -63,9 +68,12 @@ public class SceneManager : MonoBehaviour
     {
         if (!GunData.isLocked)
         {
-            GunData.isLocked = false;
+            sm.saveState.gunID = GunData.id;
             SaveReader.gunIndex = GunData.id;
+            sm.Save();
+            SaveReader.Load();
             mm.UpdateMarket();
+            Debug.Log(SaveReader.damage);
         }
     }
 
@@ -73,9 +81,12 @@ public class SceneManager : MonoBehaviour
     {
         if (SaveReader.money >= BodyData.cost && BodyData.isLocked)
         {
-            BodyData.isLocked = false;
+            sm.saveState.bodyID = BodyData.id;
             SaveReader.bodyIndex = BodyData.id;
+            sm.Save();
+            SaveReader.Load();
             mm.UpdateMarket();
+            Debug.Log(SaveReader.health);
         }
     }
 }

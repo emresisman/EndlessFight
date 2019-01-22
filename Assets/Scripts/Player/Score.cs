@@ -37,6 +37,7 @@ public class Score : MonoBehaviour
 
     public int GetMoney()
     {
-        return _money;
+        //return _money;
+        return 1000;
     }
 }

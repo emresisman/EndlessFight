@@ -12,15 +12,15 @@ public class SaveManager : MonoBehaviour
 
     private void Awake()
     {
+        //ResetData();
         Instance = this;
         guns = Resources.LoadAll<GunState>("DataFiles/Guns");
         bodies = Resources.LoadAll<BodyState>("DataFiles/Bodies");
         Load();
         //ResetData();
-        ExportItem();
-        SaveReader.Load(saveState);
         SaveReader.LoadGun(guns);
         SaveReader.LoadBody(bodies);
+        SaveReader.Load(saveState);
         DontDestroyOnLoad(gameObject);
     }
 
@@ -38,6 +38,8 @@ public class SaveManager : MonoBehaviour
 
     void FillItem()
     {
+        gun = new bool[guns.Length];
+        body = new bool[bodies.Length];
         for (int i = 0; i < guns.Length; i++)
         {
             gun[i] = guns[i].isLocked;
@@ -50,6 +52,7 @@ public class SaveManager : MonoBehaviour
 
     public void Save()
     {
+        saveState = SaveReader.ReturnSave();
         FillItem();
         PlayerPrefs.SetString("Save", SaveHelper.Serialize<SaveState>(saveState));
         PlayerPrefs.SetString("Gun", SaveHelper.Serialize<bool[]>(gun));
@@ -58,11 +61,12 @@ public class SaveManager : MonoBehaviour
 
     public void Load()
     {
-        if (PlayerPrefs.HasKey("Save"))
+        if (PlayerPrefs.HasKey("Save") && PlayerPrefs.HasKey("Gun") && PlayerPrefs.HasKey("Body"))
         {
             saveState = SaveHelper.DeserializeSave<SaveState>(PlayerPrefs.GetString("Save"));
             gun = SaveHelper.Deserialize<bool[]>(PlayerPrefs.GetString("Gun"));
             body = SaveHelper.Deserialize<bool[]>(PlayerPrefs.GetString("Body"));
+            ExportItem();
         }
         else
         {
@@ -86,6 +90,7 @@ public class SaveManager : MonoBehaviour
 
     public void ResetData()
     {
+        FillItem();
         PlayerPrefs.DeleteKey("Save");
         PlayerPrefs.DeleteKey("Gun");
         PlayerPrefs.DeleteKey("Body");

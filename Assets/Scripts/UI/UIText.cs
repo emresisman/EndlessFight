@@ -16,7 +16,7 @@ public class UIText : MonoBehaviour {
         _scoreText = _setscoreText;
         _comboText = _setcomboText;
         _highScoreText = _sethighScoreText;
-        _highScoreText.text = SaveReader.highScore.ToString() + " : " + SaveReader.money.ToString();
+        _highScoreText.text = "High Score : " + SaveReader.highScore.ToString() + " : Money : " + SaveReader.money.ToString();
         _dangerText.gameObject.SetActive(false);
     }
 
