@@ -66,10 +66,9 @@ public class SaveReader
         bodies = bodyState;
     }
 
-    void SetHealth(int health)
+    public static int GetHealth()
     {
-        PlayerMovement pm = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
-        pm.Health = health;
+        return health;
     }
 
     public static SaveState ReturnSave()

@@ -43,10 +43,15 @@ public static class SaveHelper
     public static void StopGame(int score, int cost)
     {
         SaveManager sm = GameObject.Find("SaveManager").GetComponent<SaveManager>();
-        sm.saveState.cost += cost;
-        if (score > sm.saveState.highScore)
+        //sm.saveState.cost += cost;
+        SaveReader.money += cost;
+        /*if (score > sm.saveState.highScore)
         {
             sm.saveState.highScore = score;
+        }*/
+        if (score > SaveReader.highScore)
+        {
+            SaveReader.highScore = score;
         }
         sm.Save();
         UnityEngine.SceneManagement.SceneManager.LoadScene(0);

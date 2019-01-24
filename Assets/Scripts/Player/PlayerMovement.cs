@@ -8,17 +8,9 @@ public class PlayerMovement : MonoBehaviour {
     float _horizontalSpeed, _verticalSpeed;
     public FixedJoystick _joystick;
 
-    public int Health
+    void Awake()
     {
-        get
-        {
-            return health;
-        }
-
-        set
-        {
-            health = value;
-        }
+        health = SaveReader.GetHealth();
     }
 
     void Update () {
@@ -60,8 +52,8 @@ public class PlayerMovement : MonoBehaviour {
 
     public void TakeDamage(int damage)
     {
-        Health -= damage;
-        if (Health <= 0)
+        health -= damage;
+        if (health <= 0)
         {
             Score s = this.gameObject.GetComponent<Score>();
             SaveHelper.StopGame(s.GetScore(), s.GetMoney());

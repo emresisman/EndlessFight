@@ -47,7 +47,7 @@ public class EnemyAI : MonoBehaviour {
         {
             Destroy(this.gameObject);
             _cC.Shake();
-            _target.TakeDamage(1);
+            _target.TakeDamage(5);
         }
         else if(collision.gameObject.tag == "Bullet")
         {

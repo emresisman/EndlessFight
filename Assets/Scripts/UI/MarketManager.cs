@@ -12,14 +12,22 @@ public class MarketManager : MonoBehaviour
     public Image itemPrefab;
     public Image gunPanel, bodyPanel;
     public GameObject popUpGun, popUpBody;
-    private Color useColor;
+    private Color useColor, buyColor;
     public SceneManager sm;
 
     internal void PopGun(bool v, GameObject gameObject)
     {
         if (v)
         {
-            popUpGun.transform.position = gameObject.transform.position;
+            if (Camera.main.ScreenToWorldPoint(gameObject.transform.position).x < 0)
+            {
+                
+                popUpGun.transform.position = new Vector3(gameObject.transform.position.x + 100, gameObject.transform.position.y, gameObject.transform.position.z);
+            }
+            else
+            {
+                popUpGun.transform.position = new Vector3(gameObject.transform.position.x - 300, gameObject.transform.position.y, gameObject.transform.position.z);
+            }
             popUpGun.SetActive(true);           
         }
         else
@@ -32,7 +40,14 @@ public class MarketManager : MonoBehaviour
     {
         if (v)
         {
-            popUpBody.transform.position = gameObject.transform.position;
+            if (gameObject.transform.position.x < Screen.width)
+            {
+                popUpBody.transform.position = new Vector3(gameObject.transform.position.x + 50, gameObject.transform.position.y, gameObject.transform.position.z);
+            }
+            else
+            {
+                popUpBody.transform.position = new Vector3(gameObject.transform.position.x - 50, gameObject.transform.position.y, gameObject.transform.position.z);
+            }
             popUpBody.SetActive(true);
         }
         else
@@ -44,6 +59,7 @@ public class MarketManager : MonoBehaviour
     void Start()
     {
         useColor = new Color(0.5f, 1f, 0.5f);
+        buyColor = new Color(1, 1, 1);
         position = 135;
         buyButtonWeapon = new Image[SaveReader.gunCount];
         buyButtonBody = new Image[SaveReader.bodyCount];
@@ -126,8 +142,19 @@ public class MarketManager : MonoBehaviour
             }
             else
             {
+                if (i == SaveReader.gunIndex)
+                {
+                    btn.transform.GetChild(0).GetComponent<Text>().text = " ";
+                    btn.GetComponent<Image>().enabled = false;
+                }
+                else
+                {
+                    btn.transform.GetChild(0).GetComponent<Text>().text = "Buy";
+                    btn.GetComponent<Image>().enabled = true;
+                }
                 btn.onClick.RemoveAllListeners();
                 btn.onClick.AddListener(delegate { sm.BuyClick(gun, gun.id); });
+                btn.GetComponent<Image>().color = buyColor;
             }
         }
         for (int i = 0; i < buyButtonBody.Length; i++)
@@ -152,8 +179,19 @@ public class MarketManager : MonoBehaviour
             }
             else
             {
+                if (i == SaveReader.bodyIndex)
+                {
+                    btn.transform.GetChild(0).GetComponent<Text>().text = " ";
+                    btn.GetComponent<Image>().enabled = false;
+                }
+                else
+                {
+                    btn.transform.GetChild(0).GetComponent<Text>().text = "Buy";
+                    btn.GetComponent<Image>().enabled = true;
+                }
                 btn.onClick.RemoveAllListeners();
                 btn.onClick.AddListener(delegate { sm.BuyClick(body, body.id); });
+                btn.GetComponent<Image>().color = buyColor;
             }
         }
     }
