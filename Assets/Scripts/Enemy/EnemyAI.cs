@@ -8,7 +8,7 @@ public class EnemyAI : MonoBehaviour {
     private PlayerMovement _target;
     private Score _score;
     private float _enemySpeed;
-    public int _health = 4;
+    public int _health = 2;
 
 	void Start () {
         _enemySpeed = 0.1f;
@@ -23,7 +23,7 @@ public class EnemyAI : MonoBehaviour {
         this.transform.Translate(_moveVector * _enemySpeed, Space.World);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    /*private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
@@ -39,15 +39,15 @@ public class EnemyAI : MonoBehaviour {
                 _score.EnemyDead(10);
             }
         }
-    }
+    }*/
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            _score.PlayerDamage();
             Destroy(this.gameObject);
             _cC.Shake();
+            _target.TakeDamage(5);
         }
         else if(collision.gameObject.tag == "Bullet")
         {

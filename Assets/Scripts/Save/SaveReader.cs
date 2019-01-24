@@ -1,55 +1,84 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class SaveReader : MonoBehaviour
+public class SaveReader
 {
+    //SaveState
+    public static SaveState save;
     public static int money;
     public static int highScore;
     public static int level;
     public static int experience;
-    public static int damage;
-    public static int health;
-    public static float speed;
-    public static float bulletSpeed;
-    public static float fireRate;
     public static int gunIndex;
     public static int bodyIndex;
 
-    public static void Load(GunState gunState, BodyState bodyState, SaveState saveState)
+    //GunState
+    public static float bulletSpeed;
+    public static float fireRate;
+
+    //BodyState
+    public static float speed;
+    
+    //Other
+    public static int gunCount;
+    public static int bodyCount;
+    public static GunState[] guns;
+    public static BodyState[] bodies;
+    public static Sprite[] gunSprites;
+    public static Sprite[] bodySprites;
+    public static int damage;
+    public static int health;
+
+    public static void Load(SaveState saveState)
     {
-        DetectGun(gunState);
-        DetectBody(bodyState);
-        money = saveState.cost;
-        highScore = saveState.highScore;
-        level = saveState.level;
-        experience = saveState.experience;
-        damage = saveState.baseDamage + gunState.damage[gunIndex];
-        health = saveState.baseHealth + bodyState.health[bodyIndex];
-        speed = bodyState.movementSpeed[bodyIndex];
-        bulletSpeed = gunState.bulletSpeed[gunIndex];
-        fireRate = gunState.fireRate[gunIndex];
+        save = saveState;
+        Load();
     }
 
-    static void DetectGun(GunState gunState)
+    public static void Load()
     {
-        for (int i = 0; i < gunState.isUse.Length; i++)
-        {
-            if (gunState.isUse[i])
-            {
-                gunIndex = i;
-            }
-        }
+        gunSprites = Resources.LoadAll<Sprite>("Sprites/UI/Guns");
+        bodySprites = Resources.LoadAll<Sprite>("Sprites/UI/Body");
+        gunIndex = guns[save.gunID].id;
+        bodyIndex = bodies[save.bodyID].id;
+        gunCount = guns.Length;
+        bodyCount = bodies.Length;
+        money = save.cost;
+        highScore = save.highScore;
+        level = save.level;
+        experience = save.experience;
+        damage = save.baseDamage + guns[save.gunID].damage;
+        health = save.baseHealth + bodies[save.bodyID].health;
+        speed = bodies[save.bodyID].movementSpeed;
+        bulletSpeed = guns[save.gunID].bulletSpeed;
+        fireRate = guns[save.gunID].fireRate;
     }
 
-    static void DetectBody(BodyState bodyState)
+    public static void LoadGun(GunState[] gunState)
     {
-        for (int i = 0; i < bodyState.isUse.Length; i++)
-        {
-            if (bodyState.isUse[i])
-            {
-                bodyIndex = i;
-            }
-        }
+        guns = gunState;
+    }
+
+    public static void LoadBody(BodyState[] bodyState)
+    {
+        bodies = bodyState;
+    }
+
+    public static int GetHealth()
+    {
+        return health;
+    }
+
+    public static SaveState ReturnSave()
+    {
+        save.cost = money;
+        save.highScore = highScore;
+        save.level = level;
+        save.experience = experience;
+        save.gunID = gunIndex;
+        save.bodyID = bodyIndex;
+        return save;
     }
 }

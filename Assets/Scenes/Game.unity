@@ -1104,6 +1104,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df1dbfa484425af4baac8ca1fb118548, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  saveState:
+    cost: 0
+    highScore: 0
+    experience: 0
+    level: 1
+    baseDamage: 1
+    baseHealth: 5
+    gunID: 0
+    bodyID: 0
 --- !u!4 &445499112
 Transform:
   m_ObjectHideFlags: 0
@@ -3223,6 +3232,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b46faf4ce9f544e4187eed653bfe17b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _setdangerText: {fileID: 1439680123}
+  _setscoreText: {fileID: 1167112702}
+  _setcomboText: {fileID: 2141188489}
+  _sethighScoreText: {fileID: 1122299983}
 --- !u!1 &1122299982
 GameObject:
   m_ObjectHideFlags: 0
@@ -3236,7 +3249,7 @@ GameObject:
   - component: {fileID: 1122299983}
   - component: {fileID: 1122299984}
   m_Layer: 5
-  m_Name: HighScore
+  m_Name: HighScoreText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3315,7 +3328,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0.000061035156, y: -74.99988}
+  m_AnchoredPosition: {x: 0.000061035156, y: -74.999756}
   m_SizeDelta: {x: 1000, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &1128306228 stripped
