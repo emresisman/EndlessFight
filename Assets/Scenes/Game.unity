@@ -1113,6 +1113,10 @@ MonoBehaviour:
     baseHealth: 5
     gunID: 0
     bodyID: 0
+  guns: []
+  bodies: []
+  gun: 
+  body: 
 --- !u!4 &445499112
 Transform:
   m_ObjectHideFlags: 0
@@ -5390,7 +5394,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceec543c6ad38ab4eabed3cd3d969aa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemy: {fileID: 1507621174180516, guid: 0e308df9e6a6bd14b8de59332dddd95b, type: 3}
+  _enemy:
+  - {fileID: 1507621174180516, guid: 314a52d6cbffc47418776ff819859130, type: 3}
+  - {fileID: 1507621174180516, guid: 0e308df9e6a6bd14b8de59332dddd95b, type: 3}
+  - {fileID: 1507621174180516, guid: dafcf7d4d411c754eb0677463f5d2115, type: 3}
+  - {fileID: 1507621174180516, guid: 313690e609c930a40a6051c78560ec23, type: 3}
 --- !u!1 &1892390816
 GameObject:
   m_ObjectHideFlags: 0

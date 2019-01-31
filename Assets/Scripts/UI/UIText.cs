@@ -34,7 +34,11 @@ public class UIText : MonoBehaviour {
             _dangerText.text = "";
             _dangerText.gameObject.SetActive(false);
         }
-        if (_dangerTimer <= 0) Time.timeScale = 0f;
+        if (_dangerTimer <= 0)
+        {
+            Score s = GameObject.FindGameObjectWithTag("Player").GetComponent<Score>();
+            SaveHelper.StopGame(s.GetScore(), s.GetMoney());
+        }
     }
 
     public static void DangerText(bool isDanger)

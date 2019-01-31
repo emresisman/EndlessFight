@@ -7,6 +7,21 @@ public class Score : MonoBehaviour
     private float _score = 0f, _comboTimer = 2f;
     private int _comboCount = 1;
     private int _money = 0;
+    private int _deathCount = 0;
+
+    public int DeathCount
+    {
+        get
+        {
+            return _deathCount;
+        }
+
+        set
+        {
+            _deathCount = value;
+        }
+    }
+
     //public SaveManager save;
 
     void Update()
@@ -28,6 +43,7 @@ public class Score : MonoBehaviour
         _comboCount++;
         _comboTimer = 2f;
         _money += 10;
+        _deathCount += 1;
     }
 
     public int GetScore()

@@ -7,11 +7,12 @@ public class EnemyAI : MonoBehaviour {
     private CameraController _cC;
     private PlayerMovement _target;
     private Score _score;
-    private float _enemySpeed;
-    public int _health = 2;
+    public float _enemySpeed;
+    public int _health;
+    public int _value;
+    public int _damage;
 
 	void Start () {
-        _enemySpeed = 0.1f;
         _cC = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraController>();
         _target = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
         _score = GameObject.FindGameObjectWithTag("Player").GetComponent<Score>();
@@ -20,7 +21,7 @@ public class EnemyAI : MonoBehaviour {
 	void Update () {
         Vector3 _moveVector = _target.GetPosition() - transform.position;
         _moveVector = _moveVector.normalized;
-        this.transform.Translate(_moveVector * _enemySpeed, Space.World);
+        this.transform.Translate(_moveVector * Time.deltaTime * _enemySpeed, Space.World);
     }
 
     /*private void OnCollisionEnter2D(Collision2D collision)
@@ -47,7 +48,7 @@ public class EnemyAI : MonoBehaviour {
         {
             Destroy(this.gameObject);
             _cC.Shake();
-            _target.TakeDamage(5);
+            _target.TakeDamage(_damage);
         }
         else if(collision.gameObject.tag == "Bullet")
         {
@@ -55,7 +56,7 @@ public class EnemyAI : MonoBehaviour {
             if (_health <= 0)
             {
                 Destroy(this.gameObject);
-                _score.EnemyDead(10);
+                _score.EnemyDead(_value);
             }
         }
     }

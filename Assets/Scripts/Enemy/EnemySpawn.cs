@@ -7,7 +7,8 @@ public class EnemySpawn : MonoBehaviour {
     private float _instantiateDelay, _instantiateTimer, _yMin, _yMax, _xMin, _xMax, _ySpace, _xSpace;
     private Vector3 _randomPoint;
     private PlayerMovement _player;
-    public GameObject _enemy;
+    private Score _score;
+    public GameObject[] _enemy;
 
 	void Start () {
         _yMin = -27f;
@@ -19,7 +20,8 @@ public class EnemySpawn : MonoBehaviour {
         _instantiateTimer = 0f;
         _instantiateDelay = 1f;
         _player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
-	}
+        _score = GameObject.FindGameObjectWithTag("Player").GetComponent<Score>();
+    }
 	
 	void Update () {
         _instantiateTimer += Time.deltaTime;
@@ -33,8 +35,26 @@ public class EnemySpawn : MonoBehaviour {
     private void CreateEnemy()
     {
         Vector3 _playerPosition = _player.GetPosition();
-        GameObject _enemyTemp = Instantiate(_enemy, new Vector3(RandomX(_playerPosition, _xSpace), RandomY(_playerPosition, _ySpace), -0.01f), this.transform.rotation);
-        _enemyTemp.name = "Enemy";
+        if (_score.DeathCount<20)
+        {
+            GameObject _enemyTemp = Instantiate(_enemy[0], new Vector3(RandomX(_playerPosition, _xSpace), RandomY(_playerPosition, _ySpace), -0.01f), this.transform.rotation);
+            _enemyTemp.name = "Enemy";
+        }
+        else if(_score.DeathCount<40)
+        {
+            GameObject _enemyTemp = Instantiate(_enemy[1], new Vector3(RandomX(_playerPosition, _xSpace), RandomY(_playerPosition, _ySpace), -0.01f), this.transform.rotation);
+            _enemyTemp.name = "Enemy";
+        }
+        else if (_score.DeathCount < 40)
+        {
+            GameObject _enemyTemp = Instantiate(_enemy[2], new Vector3(RandomX(_playerPosition, _xSpace), RandomY(_playerPosition, _ySpace), -0.01f), this.transform.rotation);
+            _enemyTemp.name = "Enemy";
+        }
+        else
+        {
+            GameObject _enemyTemp = Instantiate(_enemy[3], new Vector3(RandomX(_playerPosition, _xSpace), RandomY(_playerPosition, _ySpace), -0.01f), this.transform.rotation);
+            _enemyTemp.name = "Enemy";
+        }
     }
 
     private float RandomX(Vector3 _playerPos, float _space)
