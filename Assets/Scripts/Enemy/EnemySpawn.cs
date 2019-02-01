@@ -10,7 +10,8 @@ public class EnemySpawn : MonoBehaviour {
     private Score _score;
     public GameObject[] _enemy;
 
-	void Start () {
+	void Start ()
+    {
         _yMin = -27f;
         _yMax = 27f;
         _xMin = -50f;
@@ -23,7 +24,8 @@ public class EnemySpawn : MonoBehaviour {
         _score = GameObject.FindGameObjectWithTag("Player").GetComponent<Score>();
     }
 	
-	void Update () {
+	void Update ()
+    {
         _instantiateTimer += Time.deltaTime;
         if (_instantiateTimer > _instantiateDelay)
         {
