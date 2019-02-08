@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class UIText : MonoBehaviour {
 
-    private static Text _dangerText, _scoreText, _comboText, _highScoreText;
-    public Text _setdangerText, _setscoreText, _setcomboText, _sethighScoreText;
+    private static Text _dangerText, _scoreText, _comboText;
+    public Text _setdangerText, _setscoreText, _setcomboText;
     private static float _dangerTimer = 3;
     private static bool _isDanger = false;
 
@@ -15,8 +15,6 @@ public class UIText : MonoBehaviour {
         _dangerText = _setdangerText;
         _scoreText = _setscoreText;
         _comboText = _setcomboText;
-        _highScoreText = _sethighScoreText;
-        _highScoreText.text = "High Score : " + SaveReader.highScore.ToString() + " : Money : " + SaveReader.money.ToString();
         _dangerText.gameObject.SetActive(false);
     }
 

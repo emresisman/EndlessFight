@@ -60,7 +60,7 @@ public class MarketManager : MonoBehaviour
     {
         useColor = new Color(0.5f, 1f, 0.5f);
         buyColor = new Color(1, 1, 1);
-        position = 135;
+        position = 160;
         buyButtonWeapon = new Image[SaveReader.gunCount];
         buyButtonBody = new Image[SaveReader.bodyCount];
         OnLoad();
@@ -89,9 +89,9 @@ public class MarketManager : MonoBehaviour
             cost.text = gun.cost.ToString();
             name.text = gun.name;
             sprite.sprite = SaveReader.gunSprites[i];
-            position+= 235;
+            position+= 230;
         }
-        position = 135;
+        position = 160;
         for (int i = 0; i < buyButtonBody.Length; i++)
         {
             BodyState body = SaveReader.bodies[i];
@@ -108,7 +108,7 @@ public class MarketManager : MonoBehaviour
             cost.text = body.cost.ToString();
             name.text = body.name;
             sprite.sprite = SaveReader.bodySprites[i];
-            position += 235;
+            position += 230;
         }
         int panelHeight = (Screen.height - 250) / 2;
         gunPanel.rectTransform.offsetMin = new Vector2(50, (panelHeight + 200));
