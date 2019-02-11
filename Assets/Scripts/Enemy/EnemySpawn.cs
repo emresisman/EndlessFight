@@ -47,7 +47,7 @@ public class EnemySpawn : MonoBehaviour {
             GameObject _enemyTemp = Instantiate(_enemy[1], new Vector3(RandomX(_playerPosition, _xSpace), RandomY(_playerPosition, _ySpace), -0.01f), this.transform.rotation);
             _enemyTemp.name = "Enemy";
         }
-        else if (_score.DeathCount < 40)
+        else if (_score.DeathCount < 60)
         {
             GameObject _enemyTemp = Instantiate(_enemy[2], new Vector3(RandomX(_playerPosition, _xSpace), RandomY(_playerPosition, _ySpace), -0.01f), this.transform.rotation);
             _enemyTemp.name = "Enemy";

@@ -738,7 +738,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 498f1e3efb046504a961bc79676ade3c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 40fc662f18119cb4983ea36a6be049c3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -758,7 +758,7 @@ Transform:
   m_GameObject: {fileID: 354871323}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.01}
-  m_LocalScale: {x: 0.15, y: 0.15, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -787,7 +787,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85b2f6b42e5a3724a9dad81e9af7743d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _bullet: {fileID: 1713380252159478, guid: a28645f62d390e84bafe645d8c9d8791, type: 3}
+  _bullet: {fileID: 870714758267129998, guid: dd18c81110691974f9bf3aed1fb6d2d1, type: 3}
   _fj: {fileID: 1478904776}
 --- !u!50 &354871329
 Rigidbody2D:
@@ -825,7 +825,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 3.1999998
+  m_Radius: 2.27
 --- !u!114 &354871331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3238,7 +3238,6 @@ MonoBehaviour:
   _setdangerText: {fileID: 1439680123}
   _setscoreText: {fileID: 1167112702}
   _setcomboText: {fileID: 2141188489}
-  _sethighScoreText: {fileID: 0}
 --- !u!224 &1128306228 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224070147403872398, guid: ce5089f3caa5bb042a4d4c23a427bc82,

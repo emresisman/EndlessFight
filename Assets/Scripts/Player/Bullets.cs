@@ -10,7 +10,7 @@ public class Bullets : MonoBehaviour {
 
 	void Start () {
         _sprites = this.GetComponent<SpriteRenderer>();
-        _sprites.sprite=Resources.Load("Sprites/Player/Bullets/Bullet1", typeof(Sprite)) as Sprite;
+        _sprites.sprite=Resources.Load("Sprites/Player/Bullets/RedBullet", typeof(Sprite)) as Sprite;
     }
 	
 	void Update () {
