@@ -2353,7 +2353,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moneyText: {fileID: 1881377314}
-  buttonText: {fileID: 0}
   itemPrefab: {fileID: 7531322300832127386, guid: af90b77bbb475284e96ee7c1f2978872,
     type: 3}
   gunPanel: {fileID: 1196761869}

@@ -8,7 +8,7 @@ public class MarketManager : MonoBehaviour
 {
     int money, position;
     Image[] buyButtonWeapon, buyButtonBody;
-    public Text moneyText, buttonText;
+    public Text moneyText;
     public Image itemPrefab;
     public Image gunPanel, bodyPanel;
     public GameObject popUpGun, popUpBody;
