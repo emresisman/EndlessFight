@@ -5,11 +5,10 @@ using UnityEngine.UI;
 
 public class MenuUI : MonoBehaviour
 {
-    public Text _money, _highScore;
+    public Text _money;
 
     void Start()
     {
-        _money.text = "Money : " + SaveReader.money.ToString();
-        _highScore.text = "High Score : " + SaveReader.highScore.ToString();
+        _money.text = SaveReader.money.ToString();
     }
 }

@@ -75,7 +75,7 @@ public class MarketManager : MonoBehaviour
         for (int i = 0; i < buyButtonWeapon.Length; i++)
         {
             GunState gun = SaveReader.guns[i];
-            Image gunitem = Instantiate(itemPrefab, gunPanel.transform);
+            Image gunitem = Instantiate(itemPrefab, gunPanel.transform.GetChild(0).transform);
             buyButtonWeapon[i] = gunitem;
             gunitem.rectTransform.anchoredPosition = new Vector3(position, 0, 0);
             gunitem.GetComponent<MarketItemClickAction>().isGun = true;
@@ -95,7 +95,7 @@ public class MarketManager : MonoBehaviour
         for (int i = 0; i < buyButtonBody.Length; i++)
         {
             BodyState body = SaveReader.bodies[i];
-            Image gunitem = Instantiate(itemPrefab, bodyPanel.transform);
+            Image gunitem = Instantiate(itemPrefab, bodyPanel.transform.GetChild(0).transform);
             buyButtonBody[i] = gunitem;
             gunitem.rectTransform.anchoredPosition = new Vector3(position, 0, 0);
             gunitem.GetComponent<MarketItemClickAction>().isGun = false;
@@ -110,10 +110,48 @@ public class MarketManager : MonoBehaviour
             sprite.sprite = SaveReader.bodySprites[i];
             position += 230;
         }
-        int panelHeight = (Screen.height - 250) / 2;
-        gunPanel.rectTransform.offsetMin = new Vector2(50, (panelHeight + 200));
-        bodyPanel.rectTransform.offsetMax = new Vector2(-50, -(panelHeight + 100));
-        //gunPanel.rectTransform.
+        gunPanel.color = new Color(0f, 0.5490f, 1f, 0.65f);
+        bodyPanel.color = new Color(0f, 0.5490f, 1f, 0.25f);
+    }
+
+    public void ChangeActivityBody(bool value)
+    {
+        if (value)
+        {
+            bodyPanel.gameObject.transform.SetSiblingIndex(2);
+            gunPanel.color = new Color(0f, 0.5490f, 1f, 0.25f);
+            bodyPanel.color = new Color(0f, 0.5490f, 1f, 0.65f);
+        }
+        else
+        {
+            bodyPanel.gameObject.transform.SetSiblingIndex(1);
+            gunPanel.color = new Color(0f, 0.5490f, 1f, 0.65f);
+            bodyPanel.color = new Color(0f, 0.5490f, 1f, 0.25f);
+        }
+        foreach (Image child in buyButtonBody)
+        {
+            child.gameObject.SetActive(value);
+        }
+    }
+
+    public void ChangeActivityGun(bool value)
+    {
+        if (value)
+        {
+            gunPanel.gameObject.transform.SetSiblingIndex(2);
+            gunPanel.color = new Color(0f, 0.5490f, 1f, 0.65f);
+            bodyPanel.color = new Color(0f, 0.5490f, 1f, 0.25f);
+        }
+        else
+        {
+            gunPanel.gameObject.transform.SetSiblingIndex(1);
+            gunPanel.color = new Color(0f, 0.5490f, 1f, 0.25f);
+            bodyPanel.color = new Color(0f, 0.5490f, 1f, 0.65f);
+        }
+        foreach (Image child in buyButtonWeapon)
+        {
+            child.gameObject.SetActive(value);
+        }
     }
 
     public void UpdateMarket()
