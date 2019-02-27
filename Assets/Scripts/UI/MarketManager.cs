@@ -14,6 +14,7 @@ public class MarketManager : MonoBehaviour
     public GameObject popUpGun, popUpBody;
     private Color useColor, buyColor;
     public SceneManager sm;
+    public Button gun, body;
 
     internal void PopGun(bool v, GameObject gameObject)
     {
@@ -60,7 +61,7 @@ public class MarketManager : MonoBehaviour
     {
         useColor = new Color(0.5f, 1f, 0.5f);
         buyColor = new Color(1, 1, 1);
-        position = 160;
+        position = 280;
         buyButtonWeapon = new Image[SaveReader.gunCount];
         buyButtonBody = new Image[SaveReader.bodyCount];
         OnLoad();
@@ -75,7 +76,7 @@ public class MarketManager : MonoBehaviour
         for (int i = 0; i < buyButtonWeapon.Length; i++)
         {
             GunState gun = SaveReader.guns[i];
-            Image gunitem = Instantiate(itemPrefab, gunPanel.transform.GetChild(0).transform);
+            Image gunitem = Instantiate(itemPrefab, gunPanel.transform.GetChild(0).transform.GetChild(0).transform);
             buyButtonWeapon[i] = gunitem;
             gunitem.rectTransform.anchoredPosition = new Vector3(position, 0, 0);
             gunitem.GetComponent<MarketItemClickAction>().isGun = true;
@@ -89,13 +90,13 @@ public class MarketManager : MonoBehaviour
             cost.text = gun.cost.ToString();
             name.text = gun.name;
             sprite.sprite = SaveReader.gunSprites[i];
-            position+= 230;
+            position+= 460;
         }
-        position = 160;
+        position = 280;
         for (int i = 0; i < buyButtonBody.Length; i++)
         {
             BodyState body = SaveReader.bodies[i];
-            Image gunitem = Instantiate(itemPrefab, bodyPanel.transform.GetChild(0).transform);
+            Image gunitem = Instantiate(itemPrefab, bodyPanel.transform.GetChild(0).transform.GetChild(0).transform);
             buyButtonBody[i] = gunitem;
             gunitem.rectTransform.anchoredPosition = new Vector3(position, 0, 0);
             gunitem.GetComponent<MarketItemClickAction>().isGun = false;
@@ -108,16 +109,20 @@ public class MarketManager : MonoBehaviour
             cost.text = body.cost.ToString();
             name.text = body.name;
             sprite.sprite = SaveReader.bodySprites[i];
-            position += 230;
+            position += 460;
         }
-        gunPanel.color = new Color(0f, 0.5490f, 1f, 0.65f);
-        bodyPanel.color = new Color(0f, 0.5490f, 1f, 0.25f);
+        //gunPanel.color = new Color(0f, 0.5490f, 1f, 0.65f);
+        //bodyPanel.color = new Color(0f, 0.5490f, 1f, 0.25f);
+        ChangeActivityBody(false);
+        ChangeActivityGun(true);
     }
 
     public void ChangeActivityBody(bool value)
     {
         if (value)
         {
+            body.GetComponent<Image>().color = new Color(0f, 0.5490f, 1f, 1f);
+            gun.GetComponent<Image>().color = new Color(0f, 0.5490f, 1f, 0.6980f);
             bodyPanel.gameObject.transform.SetSiblingIndex(2);
             gunPanel.color = new Color(0f, 0.5490f, 1f, 0.25f);
             bodyPanel.color = new Color(0f, 0.5490f, 1f, 0.65f);
@@ -138,6 +143,8 @@ public class MarketManager : MonoBehaviour
     {
         if (value)
         {
+            gun.GetComponent<Image>().color = new Color(0f, 0.5490f, 1f, 1f);
+            body.GetComponent<Image>().color = new Color(0f, 0.5490f, 1f, 0.6980f);
             gunPanel.gameObject.transform.SetSiblingIndex(2);
             gunPanel.color = new Color(0f, 0.5490f, 1f, 0.65f);
             bodyPanel.color = new Color(0f, 0.5490f, 1f, 0.25f);
