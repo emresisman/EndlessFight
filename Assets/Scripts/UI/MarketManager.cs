@@ -22,12 +22,14 @@ public class MarketManager : MonoBehaviour
         {
             if (Camera.main.ScreenToWorldPoint(gameObject.transform.position).x < 0)
             {
-                
-                popUpGun.transform.position = new Vector3(gameObject.transform.position.x + 100, gameObject.transform.position.y, gameObject.transform.position.z);
+
+                popUpGun.transform.position = new Vector3(gameObject.transform.position.x + 2, gameObject.transform.position.y, gameObject.transform.position.z);
+                //popUpGun.transform.position = gameObject.transform.position;
             }
             else
             {
-                popUpGun.transform.position = new Vector3(gameObject.transform.position.x - 300, gameObject.transform.position.y, gameObject.transform.position.z);
+                popUpGun.transform.position = new Vector3(gameObject.transform.position.x - 2, gameObject.transform.position.y, gameObject.transform.position.z);
+                //popUpGun.transform.position = gameObject.transform.position;
             }
             popUpGun.SetActive(true);           
         }
