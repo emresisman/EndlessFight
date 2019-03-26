@@ -61,6 +61,8 @@ public class MarketManager : MonoBehaviour
 
     void Start()
     {
+        Func<string> greet = () => "Hello, World!";
+        Debug.Log(greet);
         useColor = new Color(0.5f, 1f, 0.5f);
         buyColor = new Color(1, 1, 1);
         //position = 280;

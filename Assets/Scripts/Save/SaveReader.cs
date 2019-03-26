@@ -15,12 +15,14 @@ public class SaveReader
     public static int bodyIndex;
 
     //GunState
+    public static int damage;
     public static float bulletSpeed;
     public static float fireRate;
 
     //BodyState
+    public static int health;
     public static float speed;
-    
+
     //Other
     public static int gunCount;
     public static int bodyCount;
@@ -28,9 +30,7 @@ public class SaveReader
     public static BodyState[] bodies;
     public static Sprite[] gunSprites;
     public static Sprite[] bodySprites;
-    public static int damage;
-    public static int health;
-
+    
     public static void Load(SaveState saveState)
     {
         save = saveState;
