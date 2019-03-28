@@ -61,8 +61,6 @@ public class MarketManager : MonoBehaviour
 
     void Start()
     {
-        Func<string> greet = () => "Hello, World!";
-        Debug.Log(greet);
         useColor = new Color(0.5f, 1f, 0.5f);
         buyColor = new Color(1, 1, 1);
         //position = 280;
@@ -139,8 +137,6 @@ public class MarketManager : MonoBehaviour
         sprite.sprite = SaveReader.gunSprites[index];
     }
 
-
-
     void FillSpecsBody(Image item, BodyState body, int index)
     {
         Text name = item.transform.GetChild(0).GetComponent<Text>();
@@ -211,7 +207,8 @@ public class MarketManager : MonoBehaviour
             {
                 if (i == SaveReader.gunIndex)
                 {
-                    btn.transform.GetChild(0).GetComponent<Text>().text = " ";
+                    btn.transform.GetChild(0).GetComponent<Text>().text = "Equipped";
+                    btn.transform.GetChild(0).GetComponent<Text>().color = Color.green;
                     btn.GetComponent<Image>().enabled = false;
                 }
                 else
@@ -227,7 +224,8 @@ public class MarketManager : MonoBehaviour
             {
                 if (i == SaveReader.gunIndex)
                 {
-                    btn.transform.GetChild(0).GetComponent<Text>().text = " ";
+                    btn.transform.GetChild(0).GetComponent<Text>().text = "Equipped";
+                    btn.transform.GetChild(0).GetComponent<Text>().color = Color.green;
                     btn.GetComponent<Image>().enabled = false;
                 }
                 else
@@ -248,7 +246,8 @@ public class MarketManager : MonoBehaviour
             {
                 if (i == SaveReader.bodyIndex)
                 {
-                    btn.transform.GetChild(0).GetComponent<Text>().text = " ";
+                    btn.transform.GetChild(0).GetComponent<Text>().text = "Equipped";
+                    btn.transform.GetChild(0).GetComponent<Text>().color = Color.green;
                     btn.GetComponent<Image>().enabled = false;
                 }
                 else
@@ -264,7 +263,8 @@ public class MarketManager : MonoBehaviour
             {
                 if (i == SaveReader.bodyIndex)
                 {
-                    btn.transform.GetChild(0).GetComponent<Text>().text = " ";
+                    btn.transform.GetChild(0).GetComponent<Text>().text = "Equipped";
+                    btn.transform.GetChild(0).GetComponent<Text>().color = Color.green;
                     btn.GetComponent<Image>().enabled = false;
                 }
                 else
