@@ -1,0 +1,12 @@
+C:\Users\emre.sisman\Documents\EndlessFight\DLLTest\DLLTest\bin\Debug\netstandard2.0\DLLTest.deps.json
+C:\Users\emre.sisman\Documents\EndlessFight\DLLTest\DLLTest\bin\Debug\netstandard2.0\DLLTest.dll
+C:\Users\emre.sisman\Documents\EndlessFight\DLLTest\DLLTest\bin\Debug\netstandard2.0\DLLTest.pdb
+C:\Users\emre.sisman\Documents\EndlessFight\DLLTest\DLLTest\bin\Debug\netstandard2.0\UnityEngine.dll
+C:\Users\emre.sisman\Documents\EndlessFight\DLLTest\DLLTest\bin\Debug\netstandard2.0\UnityEngine.xml
+C:\Users\emre.sisman\Documents\EndlessFight\DLLTest\DLLTest\obj\Debug\netstandard2.0\DLLTest.csprojAssemblyReference.cache
+C:\Users\emre.sisman\Documents\EndlessFight\DLLTest\DLLTest\obj\Debug\netstandard2.0\DLLTest.csproj.CoreCompileInputs.cache
+C:\Users\emre.sisman\Documents\EndlessFight\DLLTest\DLLTest\obj\Debug\netstandard2.0\DLLTest.AssemblyInfoInputs.cache
+C:\Users\emre.sisman\Documents\EndlessFight\DLLTest\DLLTest\obj\Debug\netstandard2.0\DLLTest.AssemblyInfo.cs
+C:\Users\emre.sisman\Documents\EndlessFight\DLLTest\DLLTest\obj\Debug\netstandard2.0\DLLTest.csproj.CopyComplete
+C:\Users\emre.sisman\Documents\EndlessFight\DLLTest\DLLTest\obj\Debug\netstandard2.0\DLLTest.dll
+C:\Users\emre.sisman\Documents\EndlessFight\DLLTest\DLLTest\obj\Debug\netstandard2.0\DLLTest.pdb

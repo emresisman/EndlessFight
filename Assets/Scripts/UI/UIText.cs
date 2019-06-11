@@ -44,7 +44,7 @@ public class UIText : MonoBehaviour {
         _isDanger = isDanger;
     }
 
-    public static void ScoreText(float _score)
+    /*public static void ScoreText(float _score)
     {
         _scoreText.text = "Score : " + (int)_score;
     }
@@ -52,5 +52,5 @@ public class UIText : MonoBehaviour {
     public static void ComboText(int _combo)
     {
         _comboText.text = "Combo : " + _combo;
-    }
+    }*/
 }

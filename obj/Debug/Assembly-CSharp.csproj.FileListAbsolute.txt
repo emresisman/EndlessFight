@@ -185,3 +185,5 @@ C:\Users\emre.sisman\Documents\EndlessFight\Temp\bin\Debug\UnityEngine.UnityTest
 C:\Users\emre.sisman\Documents\EndlessFight\Temp\bin\Debug\UnityEngine.VFXModule.xml
 C:\Users\emre.sisman\Documents\EndlessFight\Temp\bin\Debug\UnityEngine.TestRunner.xml
 C:\Users\emre.sisman\Documents\EndlessFight\Temp\bin\Debug\nunit.framework.xml
+C:\Users\emre.sisman\Documents\EndlessFight\Temp\bin\Debug\emresisman.dll
+C:\Users\emre.sisman\Documents\EndlessFight\Temp\bin\Debug\emresisman.pdb

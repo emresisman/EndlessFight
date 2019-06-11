@@ -11,6 +11,7 @@ public class EnemyAI : MonoBehaviour {
     public int _health;
     public int _value;
     public int _damage;
+    public GameObject _deathExplosion;
 
 	void Start () {
         _cC = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraController>();
@@ -23,7 +24,7 @@ public class EnemyAI : MonoBehaviour {
         _moveVector = _moveVector.normalized;
         this.transform.Translate(_moveVector * Time.deltaTime * _enemySpeed, Space.World);
     }
-
+    
     /*private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player")
@@ -41,22 +42,32 @@ public class EnemyAI : MonoBehaviour {
             }
         }
     }*/
+     
+    void DeathWithBullet()
+    {
+        Destroy(this.gameObject);
+        _score.EnemyDead(_value);
+    }
+
+    void DeathWithPlayer()
+    {
+        Destroy(this.gameObject);
+        _cC.Shake();
+        _target.TakeDamage(_damage);
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            Destroy(this.gameObject);
-            _cC.Shake();
-            _target.TakeDamage(_damage);
+            DeathWithPlayer();
         }
         else if(collision.gameObject.tag == "Bullet")
         {
             _health -= SaveReader.damage;
             if (_health <= 0)
             {
-                Destroy(this.gameObject);
-                _score.EnemyDead(_value);
+                DeathWithBullet();
             }
         }
     }

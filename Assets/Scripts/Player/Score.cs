@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using emresisman;
+using UnityEngine.UI;
 
 public class Score : MonoBehaviour
 {
@@ -26,15 +28,18 @@ public class Score : MonoBehaviour
 
     void Update()
     {
+        UIWriter.SkorYaz(_score, NesneBul.TextBul("ScoreText"));
+        UIWriter.KomboYaz(_comboCount, NesneBul.TextBul("ComboText"));
         if (_comboTimer <= 0)
         {  
-            _comboCount = 0;
+            _comboCount = 1;
             _comboTimer = 0;
         }
         //save.Save((int)_score);
         _comboTimer -= Time.deltaTime;
-        UIText.ScoreText(_score);
-        UIText.ComboText(_comboCount);
+        
+        //UIText.ScoreText(_score);
+        //UIText.ComboText(_comboCount);
     }
 
     public void EnemyDead(int _enemyClass)
